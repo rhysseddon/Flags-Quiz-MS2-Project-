@@ -78,18 +78,21 @@ Based upon the strategy the features and functionality I want to include are as 
 ## Structure
 
 The site will be structured in a linear format with clean UX keeping the users’ expectations as the main priority.  
-The site will be made up of 1 page – all the information will display inside a central box.  
-Each question will be asked in the same format with a with the start/ end information and the flags displaying in a central box and 4 multiple choice clickable answers below it.  
+A modal popup will welcome the user, give them instructions on how to use the game and enable them to start the game
+The site will be made up of 1 page – the flags will display inside a central conatainer.  
+Each question will be asked in the same format with a with the flags displaying in a central box and 4 multiple choice clickable answers below it.  
 A score counter should be at the top of the page.  
+A modal pop up at the end of the game to give the user there score and enable them to restart the game. 
 The background picture will need to keep things fun at the same time as not being too distracting.
 
 ## Skeleton
 
 The page will consist of: 
 - A header which will include a reset button, game title and scores.
-- A central container which will provide the user with the game information and display the flags.
+- A pop up modal at the start and end of the game.
+- A central container which will display the flags.
 - 4 buttons below the container for the user to click input the answers.
-- A footer which will display social media and developer information.
+- A footer which will display the developer information.
 
 ### Wiresframes
 
