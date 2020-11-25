@@ -96,6 +96,8 @@ The page will consist of:
 
 ### Wiresframes
 
+#### Desktop 
+
 ![Image](assets/wireframes/desktop-welcome.png)
 
 ![Image](assets/wireframes/desktop-correct.png)
@@ -104,6 +106,8 @@ The page will consist of:
 
 ![Image](assets/wireframes/desktop-finish.png)
 
+#### Tablet
+
 ![Image](assets/wireframes/ipad-welcome.png)
 
 ![Image](assets/wireframes/ipad-correct.png)
@@ -111,6 +115,8 @@ The page will consist of:
 ![Image](assets/wireframes/ipad-incorrect.png)
 
 ![Image](assets/wireframes/ipad-finish.png)
+
+#### Mobile 
 
 ![Image](assets/wireframes/iphone-welcome.png)
 
