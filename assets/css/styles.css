@@ -28,8 +28,14 @@ color: white;
 
 }
 .reset-button {
-font-size: 40px;
+font-size: 30px;
 text-align: left;
 background-color: gold;
 color: white;
+padding: 0 5px 5px 5px;
+border: 3px solid black;
+border-radius: 10px;
+margin-top: 10px;
+
 }
+.reset-button:hover {background-color: #3e8e41}
