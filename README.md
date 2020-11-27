@@ -178,6 +178,10 @@ The use of vibrant colours to convey a sense of fun and matching in with the geo
 6. The end modal will display.
 7. If the user clicks restart the display will revert back to step 1. 
 
+### Credits
+
+flag images from https://www.countryflags.com/en/wales-flag-image.html
+
 
 
 
