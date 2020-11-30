@@ -3,18 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN from https://getbootstrap.com/docs/4.5/getting-started/download/-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Google fonts CDN -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
     <title>Flags Quiz</title>
 </head>
 <body>
+<!-- Modal -->
+<div class="modal fade" id="startModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="d-block modal-header">
+        <h1 class="text-center modal-title">Welcome!</h1>
+        <button type="button" class="close modal" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <h2>Match the correct country to the flag</h2>  
+      </div>
+      <div class="d-block modal-footer">
+        <button type="button" class="begin-button button-hover text-center" data-dismiss="modal">Begin</button>
+       </div>
+    </div>
+  </div>
+</div>
 <header class="container-fluid"> 
   <div class="row">
     <div class="col">
         <button class="reset-button button-hover">Reset</button>
     </div>
+     
     <div class="col">
      <h1 class="title">Flags Quiz</h1>
     </div>
@@ -35,7 +57,10 @@
     <footer>
     <h2 class="footer-info">Developed by: Rhys Seddon</h2>
     </footer>
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/scripts/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
 </body>
 </html>
 
