@@ -1,7 +1,7 @@
 /* site background image */
 html {
     min-height: 100%;
-    background-image: url("/assets/images/map-image.jpg");
+    background-image: url("../images/map-image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
