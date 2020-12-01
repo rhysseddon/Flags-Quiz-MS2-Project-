@@ -13,7 +13,8 @@ $("#startModal").modal('show');
          [answers[i], answers[j]] = [answers[j], answers[i]];
      }
  }
- shuffleArray(answers);
+ 
+shuffleArray(answers);
 $(".answer1").text(answers[0]);
 $(".answer2").text(answers[1]);
 $(".answer3").text(answers[2]);
@@ -24,10 +25,13 @@ $(".answer4").text(answers[3]);
  $('.answer-button').on('click', function() {
 if ($(this).text() === "Wales") {
 $(this).css("background-color", "green");
+setTimeout( function() {
+$(".flag").attr("src", "assets/images/england-flag.jpg")
+}, 2000);
 } else {
    $(this).css("background-color", "red");
 }
 });
-$('.flag').click(function(){
- $(".flag").attr("src", "assets/images/england-flag.jpg")
-});
+
+
+
