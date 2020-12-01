@@ -19,11 +19,15 @@ $(".answer2").text(answers[1]);
 $(".answer3").text(answers[2]);
 $(".answer4").text(answers[3]);
 
- 
- 
+ //first question
 
-
-
- 
-
-  
+ $('.answer-button').on('click', function() {
+if ($(this).text() === "Wales") {
+$(this).css("background-color", "green");
+} else {
+   $(this).css("background-color", "red");
+}
+});
+$('.flag').click(function(){
+ $(".flag").attr("src", "assets/images/england-flag.jpg")
+});
