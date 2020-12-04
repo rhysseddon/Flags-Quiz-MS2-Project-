@@ -27,7 +27,6 @@ function resetButtons() {
     $('.answer-button').css("background-color", "#df9a57");
 }
 
-
 function askQuestion(flag) {
  $(".flag").attr("src", "assets/images/" + flag + "-flag.jpg");
 $('.answer-button').one('click', function() {
@@ -44,10 +43,14 @@ return;
 });
 }
 
-askQuestion("wales");
-askQuestion("scotland");
-askQuestion("ireland");
-askQuestion("england");
+
+
+function playGame(flag){
+if (answers.includes(flag)) {
+askQuestion(flag);
+}
+}
+playGame("wales");
 
 
 
