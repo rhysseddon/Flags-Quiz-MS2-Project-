@@ -3,11 +3,11 @@
 $(document).ready(function() {
 $("#startModal").modal('show');
 resetAnswers();
-question1();
+
  });
 // Below code shuffles answers array
 
-var answers = ["wales", "scotland", "ireland", "england"];
+var answers = ["wales", "scotland", "ireland", "england", "germany", "france"];
 function resetAnswers(){
 function shuffleArray(answers) {
       for (let i = answers.length -1; i > 0; i--) {
@@ -27,27 +27,36 @@ function resetButtons() {
     $('.answer-button').css("background-color", "#df9a57");
 }
 
-function question1(){
- //first question
- // The code below changes the colours of the buttons when clicked
- var shuffledAnswers = [answers[0],answers[1],answers[2],answers[3]];
- console.log(shuffledAnswers)
- $(".flag").attr("src", "assets/images/" + shuffledAnswers[0] + "-flag.jpg");
+
+function askQuestion(flag) {
+ $(".flag").attr("src", "assets/images/" + flag + "-flag.jpg");
 $('.answer-button').one('click', function() {
-if ($(this).text().match(shuffledAnswers[0])) {
+if ($(this).text().match(flag)) {
 $(this).css("background-color", "green");
-question2();
+ setTimeout( function() {
+resetAnswers();
+resetButtons();
+}, 2000);
 } else {
     $(this).css("background-color", "red");
-   
-}
-
-
+   }
 return;
 });
 }
-function question2(){
-// The code below changes the flag after 2 seconds
+
+askQuestion("wales");
+askQuestion("scotland");
+askQuestion("ireland");
+askQuestion("england");
+
+
+
+
+
+
+/*function question2(){
+
+var answer = answers[0];
     setTimeout( function() {
 $(".flag").attr("src", "assets/images/england-flag.jpg");
 resetAnswers();
@@ -61,12 +70,13 @@ question3();
     $(this).css("background-color", "red");
     
 }
-
 return;
 });
 }
+
+
 function question3(){
-// The code below changes the flag after 2 seconds
+var answer = answers[0];
     setTimeout(function() {
 $(".flag").attr("src", "assets/images/scotland-flag.jpg");
 resetAnswers();
@@ -80,13 +90,29 @@ question4();
     $(this).css("background-color", "red");
     
 }
-
 return;
 });
 }
 
-
-
+function question4(){
+var answer = answers[0];
+    setTimeout(function() {
+$(".flag").attr("src", "assets/images/ireland-flag.jpg");
+resetAnswers();
+resetButtons();
+}, 2000);
+$('.answer-button').one('click', function() {
+if ($(this).text().match("ireland")) {
+$(this).css("background-color", "green");
+question4();
+} else {
+    $(this).css("background-color", "red");
+    
+}
+return;
+});
+}
+*/
 
 
 
