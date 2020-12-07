@@ -7,7 +7,7 @@ resetAnswers();
  });
 // Below code shuffles answers array
 
-var answers = ["wales", "scotland", "ireland", "england", "germany", "france"];
+var answers = ["wales", "scotland", "ireland", "england"];
 function resetAnswers(){
 function shuffleArray(answers) {
       for (let i = answers.length -1; i > 0; i--) {
@@ -29,7 +29,7 @@ function resetButtons() {
 
 function askQuestion(flag) {
  $(".flag").attr("src", "assets/images/" + flag + "-flag.jpg");
-$('.answer-button').one('click', function() {
+$('.answer-button').on('click', function() {
 if ($(this).text().match(flag)) {
 $(this).css("background-color", "green");
  setTimeout( function() {
@@ -45,12 +45,12 @@ return;
 
 
 
-function playGame(flag){
-if (answers.includes(flag)) {
-askQuestion(flag);
-}
-}
-playGame("wales");
+
+askQuestion("wales");
+
+
+
+
 
 
 
