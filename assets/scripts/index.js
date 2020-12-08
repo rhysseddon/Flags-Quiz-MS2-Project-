@@ -22,7 +22,7 @@ function resetAnswers() {
         console.log("shuffling" + shuffledArray);
     } while (shuffledArray.includes(flags[flagCount]))
     console.log(shuffledArray);
-    shuffledArray.push(flags[flagCount]);
+    shuffledArray.push(flags[flagCount]); // Adds current flag to array
     console.log(shuffledArray);
     shuffleArray(shuffledArray); // Reshuffle array 
     console.log(shuffledArray);
@@ -43,6 +43,7 @@ $('.answer-button').on('click', function (answer) {
         $(this).css("background-color", "green");
         setTimeout(function () {
             flagCount++;
+            $('.flag-count').text("Flag: " + flagCount + "/50");
             resetAnswers();
             resetButtons();
             nextFlag();
@@ -50,6 +51,13 @@ $('.answer-button').on('click', function (answer) {
     } else {
         console.log("incorrect");
         $(this).css("background-color", "red");
+        setTimeout(function () {
+            flagCount++;
+            $('.flag-count').text("Flag: " + flagCount + "/50");
+            resetAnswers();
+            resetButtons();
+            nextFlag();
+        }, 2000);
     }
 });
 
