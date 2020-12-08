@@ -35,6 +35,7 @@ function resetAnswers() {
 var flags = ["wales", "scotland", "ireland", "england", "ireland", "france"];
 var flagCount = 0;
 var answer;
+var score = 0;
 
 $('.answer-button').on('click', function (answer) {
     answer = flags[flagCount];
@@ -43,7 +44,9 @@ $('.answer-button').on('click', function (answer) {
         $(this).css("background-color", "green");
         setTimeout(function () {
             flagCount++;
+            score++;
             $('.flag-count').text("Flag: " + flagCount + "/50");
+            $('.score').text("Score: " + flagCount);
             resetAnswers();
             resetButtons();
             nextFlag();
