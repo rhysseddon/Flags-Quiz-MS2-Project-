@@ -50,7 +50,7 @@ $('.answer-button').on('click', function (answer) {
             flagCount++;
             score++;
             $('.flag-count').text("Flag: " + flagCount + "/50");
-            $('.score').text("Score: " + flagCount);
+            $('.score').text("Score: " + score);
             resetAnswers();
             resetButtons();
             nextFlag();
@@ -58,7 +58,7 @@ $('.answer-button').on('click', function (answer) {
     } else {
         console.log("incorrect");
         $(this).css("background-color", "red");
-        $('.answer-button:contains("' + answer + '")').css("background-color", "green"); //turns correct answer button green
+       $('.answer-button:contains("' + answer + '")').css("background-color", "green"); //turns correct answer button green
         setTimeout(function () {
             flagCount++;
             $('.flag-count').text("Flag: " + flagCount + "/50");
