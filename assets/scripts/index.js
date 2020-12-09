@@ -37,12 +37,13 @@ var flagCount = 0;
 var answer;
 var score = 0;
 
+
 $('.answer-button').on('click', function (answer) {
     answer = flags[flagCount];
     if ($(this).text().match(answer)) {
         console.log(answer + " correct");
         $(this).css("background-color", "green");
-        setTimeout(function () {
+       setTimeout(function () {
             flagCount++;
             score++;
             $('.flag-count').text("Flag: " + flagCount + "/50");
@@ -50,19 +51,21 @@ $('.answer-button').on('click', function (answer) {
             resetAnswers();
             resetButtons();
             nextFlag();
-        }, 2000);
+           }, 2000);
     } else {
         console.log("incorrect");
         $(this).css("background-color", "red");
-        setTimeout(function () {
+        $('.answer-button:contains("'+ answer +'")').css("background-color", "green");
+   setTimeout(function () {
             flagCount++;
             $('.flag-count').text("Flag: " + flagCount + "/50");
-            resetAnswers();
+  resetAnswers();
             resetButtons();
             nextFlag();
-        }, 2000);
+            }, 2000);
     }
 });
+// $(".answer-button").off("click");
 
 function nextFlag() {
     $(".flag").attr("src", "assets/images/" + flags[flagCount] + "-flag.jpg");
@@ -81,63 +84,3 @@ function resetButtons() {
 
 
 
-
-/*function question2(){
-
-var answer = answers[0];
-    setTimeout( function() {
-$(".flag").attr("src", "assets/images/england-flag.jpg");
-resetAnswers();
-resetButtons();
-}, 2000);
-$('.answer-button').one('click', function() {
-if ($(this).text().match("england")) {
-$(this).css("background-color", "green");
-question3();
-} else {
-    $(this).css("background-color", "red");
-    
-}
-return;
-});
-}
-
-
-function question3(){
-var answer = answers[0];
-    setTimeout(function() {
-$(".flag").attr("src", "assets/images/scotland-flag.jpg");
-resetAnswers();
-resetButtons();
-}, 2000);
-$('.answer-button').one('click', function() {
-if ($(this).text().match("scotland")) {
-$(this).css("background-color", "green");
-question4();
-} else {
-    $(this).css("background-color", "red");
-    
-}
-return;
-});
-}
-
-function question4(){
-var answer = answers[0];
-    setTimeout(function() {
-$(".flag").attr("src", "assets/images/ireland-flag.jpg");
-resetAnswers();
-resetButtons();
-}, 2000);
-$('.answer-button').one('click', function() {
-if ($(this).text().match("ireland")) {
-$(this).css("background-color", "green");
-question4();
-} else {
-    $(this).css("background-color", "red");
-    
-}
-return;
-});
-}
-*/
