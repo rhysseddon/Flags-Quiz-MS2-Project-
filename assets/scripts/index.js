@@ -32,7 +32,7 @@ function correct() {
     resetAnswers();
     resetButtons();
     nextFlag();
-     endGame();
+    endGame();
 }
 
 function incorrect() {
@@ -41,7 +41,7 @@ function incorrect() {
     resetAnswers();
     resetButtons();
     nextFlag();
-     endGame();
+    endGame();
 }
 
 // if clicked button text matches flag it turns clicked button green if not turns clicked button red as well as the button containing the text from answer green.
@@ -67,15 +67,21 @@ function resetButtons() {
     $(".answer-button").attr("disabled", false);
 }
 
-function endGame(){
+function endGame() {
     if (flagCount === 10) {
-      $(".end-modal-text").text("You scored " + score + " /10")   
-     $("#endModal").modal('show');
-     resetGame();   
+        if (score < 5) {
+            $(".end-modal-title").text("Bad Luck!");
+        } else {
+            $(".end-modal-title").text("Welldone!");
+        }
+        $(".end-modal-score").text("You scored " + score + " /10")
+        $("#endModal").modal('show');
+        resetGame();
     }
 }
-function resetGame(){
-     flagCount = 0;
+
+function resetGame() {
+    flagCount = 0;
     score = 0;
     $('.flag-count').text("Flag: " + flagCount + "/10");
     $('.score').text("Score: " + score);
