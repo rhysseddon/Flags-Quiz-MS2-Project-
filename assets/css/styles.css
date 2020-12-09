@@ -130,7 +130,7 @@ header {
     border-radius: 10px;
 }
 
-.begin-button {
+.begin-button .reset-button{
     color: white;
     background-color: #df9a57;
     border: 3px solid black;

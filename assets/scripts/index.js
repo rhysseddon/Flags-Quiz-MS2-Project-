@@ -9,7 +9,7 @@ function shuffleArray(countries) {
         [countries[i], countries[j]] = [countries[j], countries[i]];
     }
 }
-// Shuffles countries array
+
 function resetAnswers() {
     // Takes 3 answers from the shuffled countries array and keeps shuffling until it doesnt include the flag.
     do {
@@ -33,7 +33,6 @@ function correct() {
     resetButtons();
     nextFlag();
      endGame();
-
 }
 
 function incorrect() {
@@ -44,9 +43,9 @@ function incorrect() {
     nextFlag();
      endGame();
 }
+
 // if clicked button text matches flag it turns clicked button green if not turns clicked button red as well as the button containing the text from answer green.
 function playGame() {
-   
     $(".answer-button").attr("disabled", true);
     let answer = flags[flagCount];
     if ($(this).text().match(answer)) {
@@ -71,13 +70,23 @@ function resetButtons() {
 function endGame(){
     if (flagCount === 10) {
       $(".end-modal-text").text("You scored " + score + " /10")   
-     $("#endModal").modal('show');   
+     $("#endModal").modal('show');
+     resetGame();   
     }
 }
-
+function resetGame(){
+     flagCount = 0;
+    score = 0;
+    $('.flag-count').text("Flag: " + flagCount + "/10");
+    $('.score').text("Score: " + score);
+    resetAnswers();
+    resetButtons();
+    nextFlag();
+}
 // Modal pops up on start 
 $(document).ready(function () {
     $("#startModal").modal('show');
+    $('.reset-button').on('click', resetGame);
     $('.answer-button').on('click', playGame);
     resetAnswers();
     resetButtons();
