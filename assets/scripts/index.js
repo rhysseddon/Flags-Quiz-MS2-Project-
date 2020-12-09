@@ -24,34 +24,35 @@ function resetAnswers() {
     $(".answer4").text(shuffledArray[3]);
 }
 
+function correct() {
+    flagCount++;
+    score++;
+    $('.flag-count').text("Flag: " + flagCount + "/10");
+    $('.score').text("Score: " + score);
+    resetAnswers();
+    resetButtons();
+    nextFlag();
+
+}
+
+function incorrect() {
+    flagCount++;
+    $('.flag-count').text("Flag: " + flagCount + "/10");
+    resetAnswers();
+    resetButtons();
+    nextFlag();
+}
 // if clicked button text matches flag it turns clicked button green if not turns clicked button red as well as the button containing the text from answer green.
 function playGame() {
     $(".answer-button").attr("disabled", true);
     let answer = flags[flagCount];
-
     if ($(this).text().match(answer)) {
         $(this).css("background-color", "green");
-
-        setTimeout(function () {
-            flagCount++;
-            score++;
-            $('.flag-count').text("Flag: " + flagCount + "/10");
-            $('.score').text("Score: " + score);
-            resetAnswers();
-            resetButtons();
-            nextFlag();
-        }, 2000);
+        setTimeout(correct, 2000);
     } else {
-        console.log("incorrect");
         $(this).css("background-color", "red");
         $('.answer-button:contains("' + answer + '")').css("background-color", "green"); //turns correct answer button green
-        setTimeout(function () {
-            flagCount++;
-            $('.flag-count').text("Flag: " + flagCount + "/10");
-            resetAnswers();
-            resetButtons();
-            nextFlag();
-        }, 2000);
+        setTimeout(incorrect, 2000);
     }
 }
 
