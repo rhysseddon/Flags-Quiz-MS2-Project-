@@ -1,4 +1,4 @@
-const flags = ["wales", "scotland", "ireland", "england", "france", "india", "germany", "usa", "argentina", "chile"];
+const flags = ["wales", "scotland", "ireland", "england", "france", "india", "germany", "usa", "argentina", "chile", "wales"];
 let flagCount = 0;
 let score = 0;
 const countries = ["wales", "scotland", "ireland", "england", "france", "germany", "argentina", "usa", "chile", "india"];
@@ -32,6 +32,7 @@ function correct() {
     resetAnswers();
     resetButtons();
     nextFlag();
+     endGame();
 
 }
 
@@ -41,9 +42,11 @@ function incorrect() {
     resetAnswers();
     resetButtons();
     nextFlag();
+     endGame();
 }
 // if clicked button text matches flag it turns clicked button green if not turns clicked button red as well as the button containing the text from answer green.
 function playGame() {
+   
     $(".answer-button").attr("disabled", true);
     let answer = flags[flagCount];
     if ($(this).text().match(answer)) {
@@ -63,6 +66,13 @@ function nextFlag() {
 function resetButtons() {
     $('.answer-button').css("background-color", "#df9a57");
     $(".answer-button").attr("disabled", false);
+}
+
+function endGame(){
+    if (flagCount === 10) {
+      $(".end-modal-text").text("You scored " + score + " /10")   
+     $("#endModal").modal('show');   
+    }
 }
 
 // Modal pops up on start 
