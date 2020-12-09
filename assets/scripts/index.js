@@ -1,22 +1,16 @@
-// Modal pops up on start 
-$(document).ready(function () {
-    $("#startModal").modal('show');
-    resetAnswers();
-    resetButtons();
-    nextFlag();
-});
+
 
 // Takes an array of all the countries and shuffles
 var countries = ["wales", "scotland", "ireland", "england", "france", "germany", "argentina", "usa", "chile", "india"];
-
-// Shuffles countries array
-function resetAnswers() {
-    function shuffleArray(countries) {
+function shuffleArray(countries) {
         for (let i = countries.length - 1; i > 0; i--) {
             j = Math.floor(Math.random() * (i + 1));
             [countries[i], countries[j]] = [countries[j], countries[i]];
         }
     }
+// Shuffles countries array
+function resetAnswers() {
+    
     // Takes 3 answers from the shuffled countries array and keeps shuffling until it doesnt include the flag.
     do {
         shuffleArray(countries);
@@ -36,20 +30,25 @@ function resetAnswers() {
 
 var flags = ["wales", "scotland", "ireland", "england", "france", "india", "germany", "usa", "argentina", "chile"];
 var flagCount = 0;
-var answer;
+
 var score = 0;
 
 // if clicked button text matches flag it turns clicked button green if not turns clicked button red as well as the button containing the text from answer green.
 
-$('.answer-button').on('click', function (answer) {
-    answer = flags[flagCount];
+
+
+function playGame() {
+       $(".answer-button").attr("disabled", true);
+   let answer = flags[flagCount];
+    
     if ($(this).text().match(answer)) {
         console.log(answer + " correct");
         $(this).css("background-color", "green");
+        
         setTimeout(function () {
             flagCount++;
             score++;
-            $('.flag-count').text("Flag: " + flagCount + "/50");
+            $('.flag-count').text("Flag: " + flagCount + "/10");
             $('.score').text("Score: " + score);
             resetAnswers();
             resetButtons();
@@ -58,17 +57,20 @@ $('.answer-button').on('click', function (answer) {
     } else {
         console.log("incorrect");
         $(this).css("background-color", "red");
+        
        $('.answer-button:contains("' + answer + '")').css("background-color", "green"); //turns correct answer button green
         setTimeout(function () {
             flagCount++;
-            $('.flag-count').text("Flag: " + flagCount + "/50");
+            $('.flag-count').text("Flag: " + flagCount + "/10");
             resetAnswers();
             resetButtons();
             nextFlag();
         }, 2000);
     }
-});
-// $(".answer-button").off("click");
+}
+ 
+
+
 
 function nextFlag() {
     $(".flag").attr("src", "assets/images/" + flags[flagCount] + "-flag.jpg");
@@ -76,4 +78,14 @@ function nextFlag() {
 
 function resetButtons() {
     $('.answer-button').css("background-color", "#df9a57");
+    $(".answer-button").attr("disabled", false);
 }
+
+// Modal pops up on start 
+$(document).ready(function () {
+    $("#startModal").modal('show');
+    $('.answer-button').on('click', playGame);
+    resetAnswers();
+    resetButtons();
+    nextFlag();
+});
