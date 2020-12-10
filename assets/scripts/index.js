@@ -2,49 +2,66 @@ const flags = ["wales", "scotland", "ireland", "england", "france", "india", "ge
 let flagCount = 0;
 let score = 0;
 const countries = ["wales", "scotland", "ireland", "england", "france", "germany", "argentina", "usa", "chile", "india"];
-// Takes an array of all the countries and shuffles
+/**
+ * This function shuffles the countries array into a random order.
+ * @param {Array} countries The countries that will be displayed as the buttons.
+ */
 function shuffleArray(countries) {
     for (let i = countries.length - 1; i > 0; i--) {
         j = Math.floor(Math.random() * (i + 1));
         [countries[i], countries[j]] = [countries[j], countries[i]];
     }
 }
-
+/**
+ * This function adds the countries to the buttons text. 
+ * @param {Array} countries Initial array of countries. 
+ * @param {Array} flags Initial array of flags. 
+ * @param {Array} shuffledArray Has 3 items from the countries array and gets 1 item from
+ *  the flags array and is then re shuffled and displayed on the buttons.    
+ */
 function resetAnswers() {
-    // Takes 3 answers from the shuffled countries array and keeps shuffling until it doesnt include the flag.
     do {
         shuffleArray(countries);
         shuffledArray = [countries[0], countries[1], countries[2]];
     } while (shuffledArray.includes(flags[flagCount]))
-    shuffledArray.push(flags[flagCount]); // Adds current flag to array
-    shuffleArray(shuffledArray); // Reshuffles array 
-    $(".answer1").text(shuffledArray[0]); // Adds countries to the buttons text
+    shuffledArray.push(flags[flagCount]); 
+    shuffleArray(shuffledArray); 
+    $(".answer1").text(shuffledArray[0]); 
     $(".answer2").text(shuffledArray[1]);
     $(".answer3").text(shuffledArray[2]);
     $(".answer4").text(shuffledArray[3]);
 }
-
+/**
+ * This function renders the next question
+ */
+function renderNextQuestion() {
+    resetAnswers();
+    resetButtons();
+    nextFlag();
+    endGame();
+}
+/**
+ * This function increases flag count and score and renders the next question.
+ */
 function correct() {
     flagCount++;
     score++;
     $(".flag-count").text("Flag: " + flagCount + "/10");
     $(".score").text("Score: " + score);
-    resetAnswers();
-    resetButtons();
-    nextFlag();
-    endGame();
+    renderNextQuestion();
 }
-
+/**
+ * This function increases flag count and renders the next question.
+ */
 function incorrect() {
     flagCount++;
     $(".flag-count").text("Flag: " + flagCount + "/10");
-    resetAnswers();
-    resetButtons();
-    nextFlag();
-    endGame();
+    renderNextQuestion();
 }
-
-// if clicked button text matches flag it turns clicked button green if not turns clicked button red as well as the button containing the text from answer green.
+/**
+ * This function changes the colour of the selected answer. 
+ * @param {Object}  answer jQuery object containing the flag position in the flags array.
+ */
 function playGame() {
     $(".answer-button").attr("disabled", true);
     let answer = flags[flagCount];
@@ -57,44 +74,53 @@ function playGame() {
         setTimeout(incorrect, 2000);
     }
 }
-
+/**
+ * This function changes the flag to the next flag in the flags array.
+ */
 function nextFlag() {
     $(".flag").attr("src", "assets/images/" + flags[flagCount] + "-flag.jpg");
 }
-
+/**
+ * This function changes the background colour of the buttons and enables the buttons.
+ */
 function resetButtons() {
     $(".answer-button").css("background-color", "#df9a57");
     $(".answer-button").attr("disabled", false);
 }
-
+/**
+ * This function displays end modal'
+ * @param {boolean} flagcount If flagCount is equal to ten display endmodal
+ * @param {boolean} score When score is less than 5 display "Bad luck" on endmodal or else display "Well done!".
+ */
 function endGame() {
     if (flagCount === 10) {
         if (score < 5) {
             $(".end-modal-title").text("Bad Luck!");
         } else {
-            $(".end-modal-title").text("Welldone!");
+            $(".end-modal-title").text("Well done!");
         }
         $(".end-modal-score").text("You scored " + score + " /10")
         $("#endModal").modal("show");
-        resetGame();
     }
 }
-
+/**
+ * This function resets the game.
+ */
 function resetGame() {
     flagCount = 0;
     score = 0;
     $(".flag-count").text("Flag: " + flagCount + "/10");
     $(".score").text("Score: " + score);
-    resetAnswers();
-    resetButtons();
-    nextFlag();
+    renderNextQuestion();
 }
-// Modal pops up on start 
+/**
+ * This function on start up displays start modal, resets the game when the reset button is clicked,
+ * changes the background colour of the selected answers when answer buttons are clicked and 
+ * renders the next question. 
+ */
 $(document).ready(function () {
     $("#startModal").modal("show");
     $(".reset-button").on("click", resetGame);
     $(".answer-button").on("click", playGame);
-    resetAnswers();
-    resetButtons();
-    nextFlag();
+    renderNextQuestion();
 });
