@@ -1,4 +1,4 @@
-const flags = ["wales", "scotland", "ireland", "england", "france", "india", "germany", "usa", "argentina", "chile", "wales"];
+const flags = ["wales", "scotland", "ireland", "england", "france", "india", "germany", "usa", "argentina", "chile"];
 let flagCount = 0;
 let score = 0;
 const countries = ["wales", "scotland", "ireland", "england", "france", "germany", "argentina", "usa", "chile", "india"];
@@ -46,7 +46,7 @@ function renderNextQuestion() {
 function correct() {
     flagCount++;
     score++;
-    $(".flag-count").text("Flag: " + flagCount + "/10");
+    $(".flag-count").text("Flag: " + flagCount + "/" + flags.length);
     $(".score").text("Score: " + score);
     renderNextQuestion();
 }
@@ -55,12 +55,12 @@ function correct() {
  */
 function incorrect() {
     flagCount++;
-    $(".flag-count").text("Flag: " + flagCount + "/10");
+    $(".flag-count").text("Flag: " + flagCount + "/" + flags.length);
     renderNextQuestion();
 }
 /**
  * This function changes the colour of the selected answer. 
- * @param {Object}  answer jQuery object containing the flag position in the flags array.
+ * @param {Object}  answer jQuery object containing the flag current name in the flags array.
  */
 function playGame() {
     $(".answer-button").attr("disabled", true);
@@ -70,7 +70,7 @@ function playGame() {
         setTimeout(correct, 2000);
     } else {
         $(this).css("background-color", "red");
-        $(".answer-button:contains('" + answer + "')").css("background-color", "green"); //turns correct answer button green
+        $(".answer-button:contains('" + answer + "')").css("background-color", "green");
         setTimeout(incorrect, 2000);
     }
 }
@@ -89,17 +89,18 @@ function resetButtons() {
 }
 /**
  * This function displays end modal'
- * @param {boolean} flagcount If flagCount is equal to ten display endmodal
- * @param {boolean} score When score is less than 5 display "Bad luck" on endmodal or else display "Well done!".
+ * @param {boolean} flagcount If flagCount is equal to number of flags in flags array then display endmodal.
+ * @param {boolean} score When score is less than 50% display "Bad luck" on endmodal or else display "Well done!".
  */
 function endGame() {
-    if (flagCount === 10) {
-        if (score < 5) {
+    if (flagCount === flags.length) {
+        $(".flag").attr("src", "assets/images/" + flags[0] + "-flag.jpg");
+        if (score < flags.length / 2) {
             $(".end-modal-title").text("Bad Luck!");
         } else {
             $(".end-modal-title").text("Well done!");
         }
-        $(".end-modal-score").text("You scored " + score + " /10")
+        $(".end-modal-score").text("You scored " + score + " /" + flags.length)
         $("#endModal").modal("show");
     }
 }
@@ -109,7 +110,7 @@ function endGame() {
 function resetGame() {
     flagCount = 0;
     score = 0;
-    $(".flag-count").text("Flag: " + flagCount + "/10");
+    $(".flag-count").text("Flag: " + flagCount + "/" + flags.length);
     $(".score").text("Score: " + score);
     renderNextQuestion();
 }
