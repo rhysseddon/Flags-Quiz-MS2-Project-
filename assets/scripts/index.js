@@ -24,9 +24,9 @@ function resetAnswers() {
         shuffleArray(countries);
         shuffledArray = [countries[0], countries[1], countries[2]];
     } while (shuffledArray.includes(flags[flagCount]))
-    shuffledArray.push(flags[flagCount]); 
-    shuffleArray(shuffledArray); 
-    $(".answer1").text(shuffledArray[0]); 
+    shuffledArray.push(flags[flagCount]);
+    shuffleArray(shuffledArray);
+    $(".answer1").text(shuffledArray[0]);
     $(".answer2").text(shuffledArray[1]);
     $(".answer3").text(shuffledArray[2]);
     $(".answer4").text(shuffledArray[3]);
@@ -41,22 +41,20 @@ function renderNextQuestion() {
     endGame();
 }
 /**
- * This function increases flag count and score and renders the next question.
+ * This function evaluates the answer, if it is correct it increments the score and the flag count and renders the next question
+ *  if it is incorrect it will increment only the flag count and render the next question.   
+ * @param {boolean} incrementScore If correct answer is given increment score will be true and the score will increment. 
  */
-function correct() {
-    flagCount++;
-    score++;
-    $(".flag-count").text("Flag: " + flagCount + "/" + flags.length);
-    $(".score").text("Score: " + score);
-    renderNextQuestion();
-}
-/**
- * This function increases flag count and renders the next question.
- */
-function incorrect() {
-    flagCount++;
-    $(".flag-count").text("Flag: " + flagCount + "/" + flags.length);
-    renderNextQuestion();
+function evaluateAnswer(incrementScore) {
+    setTimeout(function () {
+        if (incrementScore === true) {
+            score++;
+        }
+        flagCount++;
+        $(".flag-count").text("Flag: " + flagCount + "/" + flags.length);
+        $(".score").text("Score: " + score);
+        renderNextQuestion();
+    }, 2000);
 }
 /**
  * This function changes the colour of the selected answer. 
@@ -67,11 +65,11 @@ function playGame() {
     let answer = flags[flagCount];
     if ($(this).text().match(answer)) {
         $(this).css("background-color", "green");
-        setTimeout(correct, 2000);
+        evaluateAnswer(true);
     } else {
         $(this).css("background-color", "red");
         $(".answer-button:contains('" + answer + "')").css("background-color", "green");
-        setTimeout(incorrect, 2000);
+        evaluateAnswer(false);
     }
 }
 /**
