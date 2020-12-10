@@ -27,8 +27,8 @@ function resetAnswers() {
 function correct() {
     flagCount++;
     score++;
-    $('.flag-count').text("Flag: " + flagCount + "/10");
-    $('.score').text("Score: " + score);
+    $(".flag-count").text("Flag: " + flagCount + "/10");
+    $(".score").text("Score: " + score);
     resetAnswers();
     resetButtons();
     nextFlag();
@@ -37,7 +37,7 @@ function correct() {
 
 function incorrect() {
     flagCount++;
-    $('.flag-count').text("Flag: " + flagCount + "/10");
+    $(".flag-count").text("Flag: " + flagCount + "/10");
     resetAnswers();
     resetButtons();
     nextFlag();
@@ -53,7 +53,7 @@ function playGame() {
         setTimeout(correct, 2000);
     } else {
         $(this).css("background-color", "red");
-        $('.answer-button:contains("' + answer + '")').css("background-color", "green"); //turns correct answer button green
+        $(".answer-button:contains('" + answer + "')").css("background-color", "green"); //turns correct answer button green
         setTimeout(incorrect, 2000);
     }
 }
@@ -63,7 +63,7 @@ function nextFlag() {
 }
 
 function resetButtons() {
-    $('.answer-button').css("background-color", "#df9a57");
+    $(".answer-button").css("background-color", "#df9a57");
     $(".answer-button").attr("disabled", false);
 }
 
@@ -75,7 +75,7 @@ function endGame() {
             $(".end-modal-title").text("Welldone!");
         }
         $(".end-modal-score").text("You scored " + score + " /10")
-        $("#endModal").modal('show');
+        $("#endModal").modal("show");
         resetGame();
     }
 }
@@ -83,17 +83,17 @@ function endGame() {
 function resetGame() {
     flagCount = 0;
     score = 0;
-    $('.flag-count').text("Flag: " + flagCount + "/10");
-    $('.score').text("Score: " + score);
+    $(".flag-count").text("Flag: " + flagCount + "/10");
+    $(".score").text("Score: " + score);
     resetAnswers();
     resetButtons();
     nextFlag();
 }
 // Modal pops up on start 
 $(document).ready(function () {
-    $("#startModal").modal('show');
-    $('.reset-button').on('click', resetGame);
-    $('.answer-button').on('click', playGame);
+    $("#startModal").modal("show");
+    $(".reset-button").on("click", resetGame);
+    $(".answer-button").on("click", playGame);
     resetAnswers();
     resetButtons();
     nextFlag();
