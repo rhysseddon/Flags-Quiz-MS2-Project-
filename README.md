@@ -92,7 +92,7 @@ The site will be made up of 1 page – the flags will display inside a central c
 The page will consist of: 
 - A header which will include a reset button, game title and scores.
 - A pop up modal at the start and end of the game.
-- A central container which will display the flags.
+- A central container which will display the flags and "correct"/"incorrect messages.
 - 4 buttons below the container for the user to click input the answers.
 - A footer which will display the developer information.
 
@@ -136,12 +136,12 @@ The game will have a old geographical theme which will correspond well with the 
 The background picture will need to keep things fun at the same time as not being too distracting.
 
 ### Typography
-The font used will be ... as it has a geographical old map feel. It will remain the same throughout the site.
+The font used will be Cinzel as it has a geographical old map feel. It will remain the same throughout the site.
 
 ### Colour Scheme
 The use of vibrant colours to convey a sense of fun and matching in with the geographical theme. The colour of the background shouldn't clash with the colours of the flags.
 
-## Features
+## Implemented Features
 
 ### Header
 
@@ -150,19 +150,26 @@ The use of vibrant colours to convey a sense of fun and matching in with the geo
 - On the right side the flag count "Flag: 40/50" and below it the score "Score: 10".
 
 ### Central Container 
-- Central container which will display the flags and correct/incorrect messages, 75% width on desktop, 100% on tablet and mobile.
+- Central container which will display the flags, 75% width on desktop, 100% on tablet and mobile.
 - Below the flag four clickable buttons displaying the answers which should be the same colour as the reset button.
  
 #### Start Modal
 - When the user first enters the site a transparent pop up modal should display within the central container, displaying the centralised text "Welcome!, Match the correct country to the flag" and below a "Begin" button.
 
 #### End Modal
-- When the game ends a transparent pop up modal should display within the central container. 
+- When the game ends a pop up modal should display within the central container. 
 - If the user has a high score it should display the centralised text "Welldone!, you scored: _their score_" and below a "Restart" button.
 - If the user has a low score it should display the centralised text "Bad Luck!, you scored: _their score_" and below a "Restart" button.
 
 ### Footer
 - Should contain small centralised text displaying "Developed by Rhys Seddon"
+
+#### Features left out
+- I decided to leave out the "correct"/"incorrect messages from displaying on top of the flags, as the flags are many different colours it would be difficult to 
+clearly display the messages without looking compromised from similar colours from the flags. 
+- To streamline the testing of the site I decided to keep the number of flags (questions) to a minimum, so the tester will not have to answer a large volume of questions to
+ get to test the end features of the game. More flags can easliy be implemented later as I used `flagcount.length` for anywhere the amount of flags would be needed, 
+ so the developer would only need to add the flag images to the images folder and country names to the `flags` array to add extra questions. 
 
 ## Game
 ### Start
@@ -171,14 +178,113 @@ The use of vibrant colours to convey a sense of fun and matching in with the geo
 
 ### Playing the Game
 1. The first flag should display with the flag count and score both set to 0. 
-2. When a correct answer is clicked the clicked button should turn green, a "correct" message should display over the flag and the score and flag count should increase by 1.
-3. When a incorrect answer is clicked the clicked button should turn red, and after a 1 second delay the correct answer button should turn green, an "incorrect" message should display over the flag and the flag count should increase by 1.
-4. After an correct or incorrect message has displayed on the central container for two seconds the next flag and new set of possible answers should then display.
+2. When a correct answer is clicked the clicked button should turn green, after 2 seconds the score and flag count should increase by 1.
+3. When a incorrect answer is clicked the clicked button should turn red, and after a 2 second delay the correct answer button should turn green and the flag count should increase by 1.
+4. The next flag and new set of possible answers should then display.
 5. Steps 2 to 4 will repeat until the flag count has reached 50/50.
 6. The end modal will display.
 7. If the user clicks restart the display will revert back to step 1. 
 
-### Credits
+### Languages
+
+- Html: Used for the site structure.
+
+- CSS: Used for adding styles to the website.
+
+- Javascript: Used to game interactive features.
+
+### Libraries
+
+- Bootstrap 4 : Used for the start and end modals and used the bootstap grid system for responsiveness of the header.
+
+- JQuery: Used to simplify to HTML DOM tree traversal and manupulation as well as event handling and CSS animation. 
+
+### IDE And Version Control
+
+- Gitpod: Used as IDE environment.
+
+- Git: Used for verion control.
+
+- Github: Used for verion control and hosting.
+
+### Tools
+
+- [Google fonts](http://Fonts.google.com) - Used to obtain the  Cinzel font.
+
+- [Coolers.co](http://Coolers.co) - Used for help with deciding on colour scheme.
+
+- [Realfavicongenerator.net](http://Realfavicongenerator.net) - Used for creation, implementation and testing of favicon.
+
+- [Jslint.com/](https://jslint.com/) - Used for validation of Javascript code when testing.
+
+- [Validator.w3.org](http://Validator.w3.org) - Used for validation of HTML code when testing.
+
+- [Jigsaw.w3.org/css-validator](http://Jigsaw.w3.org/css-validator) - Used for validation of CSS code when testing.
+
+- [Google.com/test/mobile-friendly](http://Search.google.com/test/mobile-friendly) - Used for testing the website mobile responsiveness.
+
+- Google Chrome DevTools - Used for testing website responsiveness.
+
+## Testing
+
+[TESTING.md](TESTING.md)
+
+## Best Practices
+
+### Naming Conventions
+
+Javacript variable and function naming conventions...........
+
+class names.......
+
+Files names and CSS attributes names have been kept as relevant and consistant as possible.........
+
+### Code Validation
+
+- jsLint validator test.................
+
+![Image](assets/readme-images/html-validator-test.png..........)
+
+- Code passed the W3 HTML validator on second attempt, after fixing a bug (see fixed bugs)..............
+
+![Image](assets/readme-images/html-validator-test.png................)
+
+- CSS W3 validator had two errors (see outstanding bugs)..............
+
+![Image](assets/readme-images/css-validator-test.png..................)
+
+## Deployment
+
+### Hosting
+
+The website is hosted on GitHub pages on GitHub.com, where i saved all my repositories. The method I used for deployement was as follows:
+
+- Logged into GitHub.com.
+- Opened my repositories.
+- Opened my Milestone 2 project repository.
+- Under setting tab scrolled to GitHub Pages.
+- Under source section selected branch > master and folder > root.
+- Upon saving this my website was successfully deployed to [https://rhysseddon.github.io/Flags-Quiz-MS2-Project-/](https://rhysseddon.github.io/Flags-Quiz-MS2-Project-/)
+
+### Local Deployment
+
+For local deployment:
+
+- Login to GitHub.com.
+- Open my repositories.
+- Click code and download zip.
+
+![Image](assets/readme-images/local-deployment-image.png..............)
+
+- Extract the zip file and once downloaded, open index.html in a browser.
+
+### Other deployment............
+
+## Credits
+
+### Images
+
+Background image.......
 
 flag images from https://www.countryflags.com/en/wales-flag-image.html
 
