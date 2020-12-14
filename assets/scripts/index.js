@@ -1,15 +1,15 @@
-const flags = ["wales","ireland", "india", "argentina", "chile"];
+const flags = ["wales", "ireland", "india", "argentina", "chile"];
 let flagCount = 0;
 let score = 0;
-const countries = ["wales","ireland", "india", "argentina", "chile"];
+const countries = ["wales", "ireland", "india", "argentina", "chile"];
 /**
  * This function shuffles the countries array into a random order.
  * @param {Array} countries The countries that will be displayed as the buttons.
  */
 function shuffleArray(countries) {
-    for (let i = countries.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        [countries[i], countries[j]] = [countries[j], countries[i]];
+    for (let index = countries.length - 1; index > 0; index--) {
+        let countryIndex = Math.floor(Math.random() * (i + 1));
+        [countries[index], countries[countryIndex]] = [countries[countryIndex], countries[index]];
     }
 }
 /**
@@ -20,10 +20,11 @@ function shuffleArray(countries) {
  *  the flags array and is then re shuffled and displayed on the buttons.    
  */
 function resetAnswers() {
+    let shuffledArray = [];
     do {
         shuffleArray(countries);
         shuffledArray = [countries[0], countries[1], countries[2]];
-    } while (shuffledArray.includes(flags[flagCount]))
+    } while (shuffledArray.includes(flags[flagCount]));
     shuffledArray.push(flags[flagCount]);
     shuffleArray(shuffledArray);
     $(".answer1").text(shuffledArray[0]);
@@ -113,7 +114,8 @@ function resetGame() {
     renderNextQuestion();
 }
 /**
- * This function on start up displays start modal, resets the game when the reset button is clicked,
+ * This function on start up displays start modal. 
+ * Resets the game when the reset button is clicked,
  * changes the background colour of the selected answers when answer buttons are clicked and 
  * renders the next question. 
  */
