@@ -10,8 +10,7 @@ const countries = ["wales", "ireland", "india", "argentina", "chile"];
 function shuffleArray(countries) {
     for (let index = countries.length - 1; index > 0; index--) {
         let countryIndex = Math.floor(Math.random() * (index + 1));
-        [countries[index], countries[countryIndex]] = 
-        [countries[countryIndex], countries[index]];
+        [countries[index], countries[countryIndex]] = [countries[countryIndex], countries[index]];
     }
 }
 /**
@@ -29,10 +28,10 @@ function resetAnswers() {
     } while (shuffledArray.includes(flags[flagCount]));
     shuffledArray.push(flags[flagCount]);
     shuffleArray(shuffledArray);
-    $(".answer1").text(shuffledArray[0]);
-    $(".answer2").text(shuffledArray[1]);
-    $(".answer3").text(shuffledArray[2]);
-    $(".answer4").text(shuffledArray[3]);
+    $(".answer-top-left").text(shuffledArray[0]);
+    $(".answer-top-right").text(shuffledArray[1]);
+    $(".answer-bottom-left").text(shuffledArray[2]);
+    $(".answer-bottom-right").text(shuffledArray[3]);
 }
 /**
  * Renders the next question.
@@ -79,7 +78,7 @@ function playGame() {
     } else {
         $(this).css("background-color", "red");
         $(".answer-button:contains('" + answer + "')").css("background-color",
-        "green");
+            "green");
         evaluateAnswer(false);
     }
 }
@@ -111,8 +110,8 @@ function endGame() {
         } else {
             $(".end-modal-title").text("Well done!");
         }
-        $(".end-modal-score").text("You scored: " + score + " /" + 
-        flags.length);
+        $(".end-modal-score").text("You scored: " + score + " /" +
+            flags.length);
         $("#endModal").modal("show");
     }
 }
@@ -131,7 +130,7 @@ function resetGame() {
  * Listens for clicked events for answer buttons and renders the next question. 
  */
 function initializeGame() {
-$("#startModal").modal("show");
+    $("#startModal").modal("show");
     $(".reset-button").on("click", resetGame);
     $(".answer-button").on("click", playGame);
     renderNextQuestion();
@@ -140,4 +139,4 @@ $("#startModal").modal("show");
 /**
  * Initializes game when document is loaded.
  */
- $(document).ready(initializeGame);
+$(document).ready(initializeGame);

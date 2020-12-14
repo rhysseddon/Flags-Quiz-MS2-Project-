@@ -1,87 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CDN from https://getbootstrap.com/docs/4.5/getting-started/download/-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        type="text/css" />
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- Google fonts CDN -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
     <title>Flags Quiz</title>
 </head>
+
 <body>
-<!-- Start Modal -->
-<div class="modal fade" id="startModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="d-block modal-header">
-        <h1 class="text-center modal-title">Welcome!</h1>
-        <button type="button" class="close modal" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <h2>Match the correct country to the flag</h2>  
-      </div>
-      <div class="d-block modal-footer">
-        <button type="button" class="modal-button-style button-hover text-center" data-dismiss="modal">Begin</button>
-       </div>
+    <!-- Start Modal -->
+    <div class="modal fade" id="startModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="d-block modal-header">
+                    <h1 class="text-center modal-title">Welcome!</h1>
+                    <button type="button" class="close modal" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2>Match the correct country to the flag</h2>
+                </div>
+                <div class="d-block modal-footer">
+                    <button type="button" class="modal-button-style button-hover text-center"
+                        data-dismiss="modal">Begin</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<!-- End  Modal -->
-<div class="modal fade" id="endModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="d-block modal-header">
-        <h1 class="text-center end-modal-title">""</h1>
-        <button type="button" class="close modal" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <h2 class="end-modal-score">""</h2>  
-      </div>
-      <div class="d-block modal-footer">
-        <button type="button" class="reset-button modal-button-style button-hover text-center" data-dismiss="modal">Restart</button>
-       </div>
+    <!-- End  Modal -->
+    <div class="modal fade" id="endModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="d-block modal-header">
+                    <h1 class="text-center end-modal-title">""</h1>
+                    <button type="button" class="close modal" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2 class="end-modal-score">""</h2>
+                </div>
+                <div class="d-block modal-footer">
+                    <button type="button" class="reset-button modal-button-style button-hover text-center"
+                        data-dismiss="modal">Restart</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<header class="container-fluid"> 
-  <div class="row">
-    <div class="col">
-        <button class="reset-button-style reset-button button-hover">Reset</button>
-    </div>
-     
-    <div class="col">
-     <h1 class="title">Flags Quiz</h1>
-    </div>
-    <div class="col">
-        <h2 class="flag-count">Flag: 0/10</h2>
-    <h2 class="score">Score: 0</h2> 
-    </div>
-  </div>
-</header>
-<main>
- <img src="assets/images/wales-flag.jpg" class="img-fluid flag" alt=""/>
- <button id="button1" class="answer1 answer-button button-hover" value="" >Answer1</button>
- <button id="button2" class="answer2 answer-button button-hover" value="">Answer2</button>
- <button id="button3" class="answer3 answer-button button-hover" value="">Answer3</button>
- <button id="button4" class="answer4 answer-button button-hover" value="">Answer4</button>
- 
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <button class="reset-button-style reset-button button-hover">Reset</button>
+            </div>
+
+            <div class="col">
+                <h1 class="title">Flags Quiz</h1>
+            </div>
+            <div class="col">
+                <h2 class="flag-count">Flag: 0/10</h2>
+                <h2 class="score">Score: 0</h2>
+            </div>
+        </div>
+    </header>
+    <main>
+        <img src="assets/images/wales-flag.jpg" class="img-fluid flag" alt="" />
+        <button id="button1" class="answer-top-left answer-button button-hover" value="">Answer1</button>
+        <button id="button2" class="answer-top-right answer-button button-hover" value="">Answer2</button>
+        <button id="button3" class="answer-bottom-left answer-button button-hover" value="">Answer3</button>
+        <button id="button4" class="answer-bottom-right answer-button button-hover" value="">Answer4</button>
+
     </main>
     <footer>
-    <h2 class="footer-info">Developed by: Rhys Seddon</h2>
+        <h2 class="footer-info">Developed by: Rhys Seddon</h2>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<script src="assets/scripts/index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="assets/scripts/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
 
 </body>
+
 </html>
-
-
-
