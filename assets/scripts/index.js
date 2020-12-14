@@ -4,20 +4,22 @@ let score = 0;
 const countries = ["wales", "ireland", "india", "argentina", "chile"];
 /**
  * This function shuffles the countries array into a random order.
- * @param {Array} countries The countries that will be displayed as the buttons.
+ * @param {Array} countries The countries that will be displayed 
+ * as the buttons.
  */
 function shuffleArray(countries) {
     for (let index = countries.length - 1; index > 0; index--) {
-        let countryIndex = Math.floor(Math.random() * (i + 1));
-        [countries[index], countries[countryIndex]] = [countries[countryIndex], countries[index]];
+        let countryIndex = Math.floor(Math.random() * (index + 1));
+        [countries[index], countries[countryIndex]] = 
+        [countries[countryIndex], countries[index]];
     }
 }
 /**
  * This function adds the countries to the buttons text. 
- * @param {Array} countries Initial array of countries. 
- * @param {Array} flags Initial array of flags. 
- * @param {Array} shuffledArray Has 3 items from the countries array and gets 1 item from
- *  the flags array and is then re shuffled and displayed on the buttons.    
+ * Takes countries array and shuffles it, adds 3 countries to shuffledArray,
+ * and if the current flag is not one of those 3 counties  it adds the current
+ * flag to the array. Then the array is shuffled again and added to the button 
+ * text.     
  */
 function resetAnswers() {
     let shuffledArray = [];
@@ -33,7 +35,7 @@ function resetAnswers() {
     $(".answer4").text(shuffledArray[3]);
 }
 /**
- * This function renders the next question
+ * Renders the next question.
  */
 function renderNextQuestion() {
     resetAnswers();
@@ -42,9 +44,12 @@ function renderNextQuestion() {
     endGame();
 }
 /**
- * This function evaluates the answer, if it is correct it increments the score and the flag count and renders the next question
- *  if it is incorrect it will increment only the flag count and render the next question.   
- * @param {boolean} incrementScore If correct answer is given increment score will be true and the score will increment. 
+ * Evaluates the answer, if it is correct it increments the score and the flag 
+ * count and renders the next question.
+ * If it is incorrect it will increment only the flag count and render the 
+ * next question.   
+ * @param {boolean} incrementScore If correct answer is given increment score
+ * will be true and the score will increment. 
  */
 function evaluateAnswer(incrementScore) {
     setTimeout(function () {
@@ -58,8 +63,12 @@ function evaluateAnswer(incrementScore) {
     }, 2000);
 }
 /**
- * This function changes the colour of the selected answer. 
- * @param {Object}  answer jQuery object containing the flag current name in the flags array.
+ * Changes the colour of the selected answer. 
+ * If answer is correct turns clicked button green.
+ * If answer is incorrect turns clicked button red and correct answer button 
+ * green.
+ * @param {Object}  answer jQuery object containing the flag current name in
+ * the flags array.
  */
 function playGame() {
     $(".answer-button").attr("disabled", true);
@@ -69,27 +78,30 @@ function playGame() {
         evaluateAnswer(true);
     } else {
         $(this).css("background-color", "red");
-        $(".answer-button:contains('" + answer + "')").css("background-color", "green");
+        $(".answer-button:contains('" + answer + "')").css("background-color",
+        "green");
         evaluateAnswer(false);
     }
 }
 /**
- * This function changes the flag to the next flag in the flags array.
+ * Changes the flag to the next flag in the flags array.
  */
 function nextFlag() {
     $(".flag").attr("src", "assets/images/" + flags[flagCount] + "-flag.jpg");
 }
 /**
- * This function changes the background colour of the buttons and enables the buttons.
+ * Resets the background colour of the buttons and re-enables the buttons.
  */
 function resetButtons() {
     $(".answer-button").css("background-color", "#df9a57");
     $(".answer-button").attr("disabled", false);
 }
 /**
- * This function displays end modal'
- * @param {boolean} flagcount If flagCount is equal to number of flags in flags array then display endmodal.
- * @param {boolean} score When score is less than 50% display "Bad luck" on endmodal or else display "Well done!".
+ * Displays end modal
+ * If flagCount is equal to number of flags in flags array then display 
+ * endmodal.
+ * When score is less than 50% display "Bad luck" on endmodal or else 
+ * display "Well done!".
  */
 function endGame() {
     if (flagCount === flags.length) {
@@ -99,12 +111,13 @@ function endGame() {
         } else {
             $(".end-modal-title").text("Well done!");
         }
-        $(".end-modal-score").text("You scored: " + score + " /" + flags.length);
+        $(".end-modal-score").text("You scored: " + score + " /" + 
+        flags.length);
         $("#endModal").modal("show");
     }
 }
 /**
- * This function resets the game.
+ * Resets the game.
  */
 function resetGame() {
     flagCount = 0;
@@ -114,14 +127,17 @@ function resetGame() {
     renderNextQuestion();
 }
 /**
- * This function on start up displays start modal. 
- * Resets the game when the reset button is clicked,
- * changes the background colour of the selected answers when answer buttons are clicked and 
- * renders the next question. 
+ * Displays start modal. Resets the game when the reset button is clicked.
+ * Listens for clicked events for answer buttons and renders the next question. 
  */
-$(document).ready(function () {
-    $("#startModal").modal("show");
+function initializeGame() {
+$("#startModal").modal("show");
     $(".reset-button").on("click", resetGame);
     $(".answer-button").on("click", playGame);
     renderNextQuestion();
-});
+}
+
+/**
+ * Initializes game when document is loaded.
+ */
+ $(document).ready(initializeGame);
