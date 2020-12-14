@@ -1,4 +1,4 @@
-/* site background image */
+/* Site background image */
 html {
     min-height: 100%;
     background-image: url("../images/map-image.jpg");
@@ -28,14 +28,12 @@ header {
     text-align: right;
     color: white;
     margin-top: 3px;
-
 }
 
 .score {
     font-size: 30px;
     text-align: right;
     color: white;
-
 }
 
 .reset-button-style {
@@ -63,52 +61,34 @@ header {
     border-radius: 5px;
 }
 
-.answer1 {
+.answer-button {
     position: absolute;
     width: 26%;
+    font-size: 30px;
+    background-color: #df9a57;
+    color: white;
+    padding: 3px 5px 3px 5px;
+    border: 3px solid black;
+}
+
+.answer-top-left {
     top: 73%;
     left: 23%;
-    font-size: 30px;
-    background-color: #df9a57;
-    color: white;
-    padding: 3px 5px 3px 5px;
-    border: 3px solid black;
 }
 
-.answer2 {
-    position: absolute;
-    width: 26%;
+.answer-top-right {
     top: 73%;
     right: 23%;
-    font-size: 30px;
-    background-color: #df9a57;
-    color: white;
-    padding: 3px 5px 3px 5px;
-    border: 3px solid black;
 }
 
-.answer3 {
-    position: absolute;
-    width: 26%;
+.answer-bottom-left {
     top: 85%;
     left: 23%;
-    font-size: 30px;
-    background-color: #df9a57;
-    color: white;
-    padding: 3px 5px 3px 5px;
-    border: 3px solid black;
 }
 
-.answer4 {
-    position: absolute;
-    width: 26%;
+.answer-bottom-right {
     top: 85%;
     right: 23%;
-    font-size: 30px;
-    background-color: #df9a57;
-    color: white;
-    padding: 3px 5px 3px 5px;
-    border: 3px solid black;
 }
 
 .footer-info {
@@ -120,8 +100,7 @@ header {
     bottom: 0.5%;
 }
 
-/* Below code styles the modal */
-
+/* Styles the modal */
 .modal-content {
     background-color: #df9a57;
     color: white;
@@ -137,8 +116,6 @@ header {
     border-radius: 10px;
 }
 
-
-
 /* Ipad and Ipad Pro view */
 @media (max-width: 1024px) {
     .title {
@@ -152,32 +129,29 @@ header {
         margin-left: 5%;
     }
 
-    .answer1 {
+    .answer-button {
         width: 42%;
+        font-size: 50px;
+    }
+
+    .answer-top-left {
         top: 60%;
         left: 5%;
-        font-size: 60px;
     }
 
-    .answer2 {
-        width: 42%;
+    .answer-top-right {
         top: 60%;
         right: 5%;
-        font-size: 60px;
     }
 
-    .answer3 {
-        width: 42%;
+    .answer-bottom-left {
         top: 74%;
         left: 5%;
-        font-size: 60px;
     }
 
-    .answer4 {
-        width: 42%;
+    .answer-bottom-right {
         top: 74%;
         right: 5%;
-        font-size: 60px;
     }
 }
 
@@ -199,7 +173,7 @@ header {
 
     .reset-button {
         font-size: 20px;
-        padding: 5px 5px 0px 5px;
+        padding: 4px 5px 0px 5px;
         margin-top: 17px;
     }
 
@@ -210,36 +184,49 @@ header {
         margin-left: 0;
     }
 
-    .answer1 {
+    .answer-button {
         width: 100%;
+        font-size: 50px;
+        font-size: 32px;
+        padding: 3px 5px 3px 5px;
+    }
+
+    .answer-top-left {
         top: 55%;
-        font-size: 32px;
-        padding: 3px 5px 3px 5px;
         left: 0;
-        right: 0;
     }
 
-    .answer2 {
-        width: 100%;
+    .answer-top-right {
         top: 65%;
-        font-size: 32px;
-        padding: 3px 5px 3px 5px;
         right: 0;
     }
 
-    .answer3 {
-        width: 100%;
+    .answer-bottom-left {
         top: 75%;
-        font-size: 32px;
-        padding: 3px 5px 3px 5px;
         left: 0;
     }
 
-    .answer4 {
-        width: 100%;
+    .answer-bottom-right {
         top: 85%;
-        font-size: 32px;
-        padding: 3px 5px 3px 5px;
         right: 0;
+    }
+}
+
+/* Galaxy Fold View */
+@media (max-width: 280px) {
+    .title {
+        font-size: 12px;
+    }
+
+    .flag-count {
+        font-size: 12px;
+    }
+
+    .score {
+        font-size: 12px;
+    }
+
+    .reset-button {
+        font-size: 10px;
     }
 }
