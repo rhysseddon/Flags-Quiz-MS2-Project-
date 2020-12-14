@@ -1,7 +1,7 @@
-const flags = ["wales", "scotland", "ireland", "england", "france", "india", "germany", "usa", "argentina", "chile"];
+const flags = ["wales","ireland", "india", "argentina", "chile"];
 let flagCount = 0;
 let score = 0;
-const countries = ["wales", "scotland", "ireland", "england", "france", "germany", "argentina", "usa", "chile", "india"];
+const countries = ["wales","ireland", "india", "argentina", "chile"];
 /**
  * This function shuffles the countries array into a random order.
  * @param {Array} countries The countries that will be displayed as the buttons.
@@ -98,7 +98,7 @@ function endGame() {
         } else {
             $(".end-modal-title").text("Well done!");
         }
-        $(".end-modal-score").text("You scored " + score + " /" + flags.length)
+        $(".end-modal-score").text("You scored: " + score + " /" + flags.length);
         $("#endModal").modal("show");
     }
 }
