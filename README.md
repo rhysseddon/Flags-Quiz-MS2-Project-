@@ -7,9 +7,9 @@ The reason for creating this project is for my second milestone project for a so
 
 ## User Stories
 
-- User 1: I am wanting to learn the flags of the world to improve my geography knowledge.
-- User 2: I need to learn the flags of the world as a part of my course and would like to be able to do it easily on mobile phone so I can play it on the train.
-- User 3: I am bored and would like to play a game to keep me entertained.
+- User 1: "I am wanting to learn the flags of the world to improve my geography knowledge."
+- User 2: "I need to learn the flags of the world as a part of my course and would like to be able to do it easily on mobile phone so I can play it on the train."
+- User 3: "I am bored and would like to play a game to keep me entertained."
 
 ## Strategy
 
@@ -100,13 +100,30 @@ The page will consist of:
 
 #### Desktop 
 
+<details>
+<summary>Desktop Modal (Click for image)</summary>
+<p align="center">
 ![Image](assets/wireframes/desktop-welcome.png)
-
+</p>
+</details>
+<details>
+<summary>Desktop Incorrect Answer (Click for image)</summary>
+<p align="center">
 ![Image](assets/wireframes/desktop-correct.png)
-
+</p>
+</details>
+<details>
+<summary>Desktop Incorrect Answer (Click for image)</summary>
+<p align="center">
 ![Image](assets/wireframes/desktop-incorrect.png)
-
+</p>
+</details>
+<details>
+<summary>Desktop End Modal (Click for image)</summary>
+<p align="center">
 ![Image](assets/wireframes/desktop-finish.png)
+</p>
+</details>
 
 #### Tablet
 
@@ -154,7 +171,7 @@ The use of vibrant colours to convey a sense of fun and matching in with the geo
 - Below the flag four clickable buttons displaying the answers which should be the same colour as the reset button.
  
 #### Start Modal
-- When the user first enters the site a transparent pop up modal should display within the central container, displaying the centralised text "Welcome!, Match the correct country to the flag" and below a "Begin" button.
+- When the user first enters the site a pop up modal should display within the central container, displaying the centralised text "Welcome!, Match the correct country to the flag" and below a "Begin" button.
 
 #### End Modal
 - When the game ends a pop up modal should display within the central container. 
@@ -165,11 +182,13 @@ The use of vibrant colours to convey a sense of fun and matching in with the geo
 - Should contain small centralised text displaying "Developed by Rhys Seddon"
 
 #### Features left out
-- I decided to leave out the "correct"/"incorrect messages from displaying on top of the flags, as the flags are many different colours it would be difficult to 
-clearly display the messages without looking compromised from similar colours from the flags. 
-- To streamline the testing of the site I decided to keep the number of flags (questions) to a minimum, so the tester will not have to answer a large volume of questions to
- get to test the end features of the game. More flags can easliy be implemented later as I used `flagcount.length` for anywhere the amount of flags would be needed, 
- so the developer would only need to add the flag images to the images folder and country names to the `flags` array to add extra questions. 
+- I decided to leave out the "correct"/"incorrect" messages from displaying on top of the flags, as the flags are many different colours it would be difficult to 
+clearly display the messages without looking compromised from the similar colours from the flags. 
+
+#### Features To Add later
+- At a later time an increased amount of flags or questions could be added. Or the user could customise the amount of questions
+ wtih the start pop up modal asking the user how many questions they would like to answer
+with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world. 
 
 ## Game
 ### Start
@@ -184,6 +203,8 @@ clearly display the messages without looking compromised from similar colours fr
 5. Steps 2 to 4 will repeat until the flag count has reached 50/50.
 6. The end modal will display.
 7. If the user clicks restart the display will revert back to step 1. 
+
+## Technologies Used
 
 ### Languages
 
@@ -209,13 +230,13 @@ clearly display the messages without looking compromised from similar colours fr
 
 ### Tools
 
-- [Google fonts](http://Fonts.google.com) - Used to obtain the  Cinzel font.
+- [Google fonts](http://Fonts.google.com) - Used to obtain the Cinzel font.
 
 - [Coolers.co](http://Coolers.co) - Used for help with deciding on colour scheme.
 
 - [Realfavicongenerator.net](http://Realfavicongenerator.net) - Used for creation, implementation and testing of favicon.
 
-- [Jslint.com/](https://jslint.com/) - Used for validation of Javascript code when testing.
+- [Jshint.com/](https://jshint.com/) - Used for validation of Javascript code when testing.
 
 - [Validator.w3.org](http://Validator.w3.org) - Used for validation of HTML code when testing.
 
@@ -241,17 +262,17 @@ Files names and CSS attributes names have been kept as relevant and consistant a
 
 ### Code Validation
 
-- jsLint validator test.................
+- jsHint validator test.(see outstanding bugs)
 
-![Image](assets/readme-images/html-validator-test.png..........)
+![Image](assets/images/readme-images/jshint-validator-results.png)
 
-- Code passed the W3 HTML validator on second attempt, after fixing a bug (see fixed bugs)..............
+- Code passed the W3 HTML validator on second attempt, after fixing 2 bugs (see fixed bugs)
 
-![Image](assets/readme-images/html-validator-test.png................)
+![Image](assets/images/readme-images/html-validator-passed.png)
 
-- CSS W3 validator had two errors (see outstanding bugs)..............
+- CSS W3 validator had 1621 errors (see outstanding bugs)
 
-![Image](assets/readme-images/css-validator-test.png..................)
+![Image](![Image](assets/images/readme-images/css-validator.png)
 
 ## Deployment
 
@@ -281,6 +302,12 @@ For local deployment:
 ### Other deployment............
 
 ## Credits
+- Helped with building a function to change the text value on click.
+[Stack Overflow](https://stackoverflow.com/questions/39815945/if-html-text-equals-value-onclick-change)
+[Stack Overflow `match` keyword](https://stackoverflow.com/questions/14510261/jquery-if-this-contains)
+- Used the "Dustenfeld shuffle" to create a function to shuffle the answers.
+Credit:[Stack Overflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+
 
 ### Images
 

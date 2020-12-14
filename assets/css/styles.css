@@ -8,6 +8,7 @@ html {
     background-color: grey;
 }
 
+/* Sets font size for whole site */
 body {
     font-family: 'Cinzel', serif;
 }
@@ -16,6 +17,7 @@ header {
     position: absolute;
 }
 
+/* Styles the main game title */
 .title {
     font-size: 40px;
     text-align: center;
@@ -23,6 +25,7 @@ header {
     margin-top: 8px;
 }
 
+/* Styles the flag count text */
 .flag-count {
     font-size: 30px;
     text-align: right;
@@ -30,12 +33,14 @@ header {
     margin-top: 3px;
 }
 
+/* Styles the score text */
 .score {
     font-size: 30px;
     text-align: right;
     color: white;
 }
 
+/* Styles the reset button */
 .reset-button-style {
     font-size: 30px;
     text-align: left;
@@ -47,10 +52,12 @@ header {
     margin-top: 17px;
 }
 
+/* Styles all non answer buttons */
 .button-hover:hover {
     background-color: #5abcb9;
 }
 
+/* Styles the flag container */
 .flag {
     position: absolute;
     width: 54%;
@@ -61,6 +68,7 @@ header {
     border-radius: 5px;
 }
 
+/* Styles all the answer buttons */
 .answer-button {
     position: absolute;
     width: 26%;
@@ -71,26 +79,31 @@ header {
     border: 3px solid black;
 }
 
+/* Styles the top left answer button */
 .answer-top-left {
     top: 73%;
     left: 23%;
 }
 
+/* Styles the top right answer button */
 .answer-top-right {
     top: 73%;
     right: 23%;
 }
 
+/* Styles the bottom left answer button */
 .answer-bottom-left {
     top: 85%;
     left: 23%;
 }
 
+/* Styles the bottom right answer button */
 .answer-bottom-right {
     top: 85%;
     right: 23%;
 }
 
+/* Styles the information in the footer */
 .footer-info {
     font-size: 12px;
     color: white;
@@ -118,10 +131,13 @@ header {
 
 /* Ipad and Ipad Pro view */
 @media (max-width: 1024px) {
+
+    /* Styles the main game title in Ipad and Ipad pro view */
     .title {
         font-size: 50px;
     }
 
+    /* Styles the flag count text in Ipad and ipad pro view */
     .flag {
         width: 90%;
         height: 40%;
@@ -129,26 +145,31 @@ header {
         margin-left: 5%;
     }
 
+    /* Styles all the answer buttons in Ipad and ipad pro view */
     .answer-button {
         width: 42%;
         font-size: 50px;
     }
 
+    /* Styles top left answer button in Ipad and ipad pro view */
     .answer-top-left {
         top: 60%;
         left: 5%;
     }
 
+    /* Styles top right answer button in Ipad and ipad pro view */
     .answer-top-right {
         top: 60%;
         right: 5%;
     }
 
+    /* Styles bottom left answer button in Ipad and ipad pro view */
     .answer-bottom-left {
         top: 74%;
         left: 5%;
     }
 
+    /* Styles bottom right answer button in Ipad and ipad pro view */
     .answer-bottom-right {
         top: 74%;
         right: 5%;
@@ -157,26 +178,32 @@ header {
 
 /* Mobile View */
 @media (max-width: 690px) {
+
+    /* Styles the main game title in mobile view */
     .title {
         font-size: 22px;
         margin-top: 17px;
     }
 
+    /* Styles the flag count text in mobile view */
     .flag-count {
         font-size: 17px;
         margin-top: 17px;
     }
 
+    /* Styles the score text in mobile view */
     .score {
         font-size: 17px;
     }
 
+    /* Styles the reset button in mobile view */
     .reset-button {
         font-size: 20px;
         padding: 4px 5px 0px 5px;
         margin-top: 17px;
     }
 
+    /* Styles the flag container in mobile view */
     .flag {
         width: 100%;
         height: 40%;
@@ -184,6 +211,7 @@ header {
         margin-left: 0;
     }
 
+    /* Styles all the answer buttons in mobile view */
     .answer-button {
         width: 100%;
         font-size: 50px;
@@ -191,21 +219,25 @@ header {
         padding: 3px 5px 3px 5px;
     }
 
+    /* Styles the top answer button in mobile view */
     .answer-top-left {
         top: 55%;
         left: 0;
     }
 
+    /* Styles the second from top answer button in mobile view */
     .answer-top-right {
         top: 65%;
         right: 0;
     }
 
+    /* Styles the third from top answer button in mobile view */
     .answer-bottom-left {
         top: 75%;
         left: 0;
     }
 
+    /* Styles the bottom answer button in mobile view */
     .answer-bottom-right {
         top: 85%;
         right: 0;
@@ -214,18 +246,23 @@ header {
 
 /* Galaxy Fold View */
 @media (max-width: 280px) {
+
+    /* Styles the main game title in galaxy fold view */
     .title {
         font-size: 12px;
     }
 
+    /* Changes the flag count font size in galaxy fold view */
     .flag-count {
         font-size: 12px;
     }
 
+    /* Changes the score font size in galaxy fold view */
     .score {
         font-size: 12px;
     }
 
+    /* Changes the reset button font size in galaxy fold view */
     .reset-button {
         font-size: 10px;
     }
