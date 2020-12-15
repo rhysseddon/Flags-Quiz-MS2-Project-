@@ -13,7 +13,6 @@
     * [Surface](#Surface)
 * [Features](#Features)
     * [Implemented Features](#Implemented-Features)
-    * [Features Left out](#Features-Left-Out)
     * [Features To Add Later](#Features-To-Add-Later)
 * [Game](#Game)
     * [Start](#Start)
@@ -265,14 +264,12 @@ The use of vibrant colours to convey a sense of fun and matching in with the geo
 #### Footer
 - Should contain small centralised text displaying "Developed by Rhys Seddon"
 
-### Features Left out
-- I decided to leave out the "correct"/"incorrect" messages from displaying on top of the flags, as the flags are many different colours it would be difficult to 
-clearly display the messages without looking compromised from the similar colours from the flags. 
-
 ### Features To Add later
 - At a later time an increased amount of flags or questions could be added. Or the user could customise the amount of questions
  with the start pop up modal asking the user how many questions they would like to answer
 with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world. 
+- A high score feature could be added later where on returning to the site the user can see their highest score from previous games.
+- A high score rankings feature could also be added where users can compare their scores with the high scores from other users. 
 
 ## Game
 ### Start
@@ -340,7 +337,7 @@ All names should be relevant and as consistant as possible to enable the reader 
 
 ### Code Validation
 
-- jsHint validator test. [See outstanding bugs](TESTING.md)
+- Code passed the jsHint validator test with no errors or warnings.
 
 ![Image](assets/images/readme-images/jshint-validator-results.png)
 
@@ -365,7 +362,6 @@ The website is hosted on GitHub pages on GitHub.com, where I save all my reposit
 - Upon saving this my website was successfully deployed to [https://rhysseddon.github.io/Flags-Quiz-MS2-Project-/](https://rhysseddon.github.io/Flags-Quiz-MS2-Project-/)
 
 ### Local Deployment To Browser 
-
 - Login to GitHub.com.
 - Open my repositories.
 - Click "code" and "download zip".
@@ -390,9 +386,8 @@ The website is hosted on GitHub pages on GitHub.com, where I save all my reposit
 - Helped with building a function to change the text value on click and by using the `match` keyword.  
 Credit: [Stack Overflow](https://stackoverflow.com/questions/39815945/if-html-text-equals-value-onclick-change)  
 Credit: [Stack Overflow](https://stackoverflow.com/questions/14510261/jquery-if-this-contains)
-- Used the "Dustenfeld shuffle" to create a function to shuffle the answers.
+- Used the "Dustenfeld shuffle" to create a function to shuffle the answers.  
 Credit:[Stack Overflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
-
 
 ### Images
 - The background image is open source provided by Ylanite Koppens here on [www.pexels.com](https://www.pexels.com/photo/beige-analog-gauge-697662/)
