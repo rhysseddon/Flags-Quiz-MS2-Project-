@@ -103,47 +103,98 @@ The page will consist of:
 <details>
 <summary>Desktop Modal (Click for image)</summary>
 <p align="center">
+
 ![Image](assets/wireframes/desktop-welcome.png)
 </p>
 </details>
 <details>
-<summary>Desktop Incorrect Answer (Click for image)</summary>
+<summary>Desktop Correct Answer (Click for image)</summary>
 <p align="center">
+
 ![Image](assets/wireframes/desktop-correct.png)
 </p>
 </details>
 <details>
 <summary>Desktop Incorrect Answer (Click for image)</summary>
 <p align="center">
+
 ![Image](assets/wireframes/desktop-incorrect.png)
 </p>
 </details>
 <details>
 <summary>Desktop End Modal (Click for image)</summary>
 <p align="center">
+
 ![Image](assets/wireframes/desktop-finish.png)
 </p>
 </details>
 
 #### Tablet
 
+<details>
+<summary>Ipad Start Modal (Click for image)</summary>
+<p align="center">
+
 ![Image](assets/wireframes/ipad-welcome.png)
+</p>
+</details>
+
+<details>
+<summary>Ipad Correct Answer (Click for image)</summary>
+<p align="center">
 
 ![Image](assets/wireframes/ipad-correct.png)
+</p>
+</details>
+
+<details>
+<summary>Ipad Incorrect Answer (Click for image)</summary>
+<p align="center">
 
 ![Image](assets/wireframes/ipad-incorrect.png)
+</p>
+</details>
+
+<details>
+<summary>Ipad End Modal (Click for image)</summary>
+<p align="center">
 
 ![Image](assets/wireframes/ipad-finish.png)
+</p>
+</details>
 
 #### Mobile 
+<details>
+<summary>Iphone Start Modal (Click for image)</summary>
+<p align="center">
 
 ![Image](assets/wireframes/iphone-welcome.png)
+</p>
+</details>
+
+<details>
+<summary>Iphone Correct Answer (Click for image)</summary>
+<p align="center">
 
 ![Image](assets/wireframes/iphone-correct.png)
+</p>
+</details>
+
+<details>
+<summary>Iphone Incorrect Answer (Click for image)</summary>
+<p align="center">
 
 ![Image](assets/wireframes/iphone-incorrect.png)
+</p>
+</details>
+
+<details>
+<summary>Iphone End Modal (Click for image)</summary>
+<p align="center">
 
 ![Image](assets/wireframes/iphone-finish.png)
+</p>
+</details>
 
 ## Surface
 
@@ -234,13 +285,13 @@ with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world.
 
 - [Coolers.co](http://Coolers.co) - Used for help with deciding on colour scheme.
 
-- [Realfavicongenerator.net](http://Realfavicongenerator.net) - Used for creation, implementation and testing of favicon.
+- [www.favicon-generator.org](https://www.favicon-generator.org/search/---/Flag) - Used for creation and implementation of favicon.
 
-- [Jshint.com/](https://jshint.com/) - Used for validation of Javascript code when testing.
+- [Jshint.com/](https://jshint.com/) - Used for validation of Javascript code.
 
-- [Validator.w3.org](http://Validator.w3.org) - Used for validation of HTML code when testing.
+- [Validator.w3.org](http://Validator.w3.org) - Used for validation of HTML code.
 
-- [Jigsaw.w3.org/css-validator](http://Jigsaw.w3.org/css-validator) - Used for validation of CSS code when testing.
+- [Jigsaw.w3.org/css-validator](http://Jigsaw.w3.org/css-validator) - Used for validation of CSS code.
 
 - [Google.com/test/mobile-friendly](http://Search.google.com/test/mobile-friendly) - Used for testing the website mobile responsiveness.
 
@@ -270,7 +321,7 @@ Files names and CSS attributes names have been kept as relevant and consistant a
 
 ![Image](assets/images/readme-images/html-validator-passed.png)
 
-- CSS W3 validator had 1621 errors (see outstanding bugs)
+- CSS W3 validator had 2 errors (see outstanding bugs)
 
 ![Image](![Image](assets/images/readme-images/css-validator.png)
 
