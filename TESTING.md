@@ -21,6 +21,11 @@
 
 ## Return to [README.md](README.md)
 
+## Favicon
+- A purple flag should display as the favicon once the page has loaded.
+
+![Image](assets/images/readme-images/favicon-screenshot.png)
+
 ## Background Image
 - The background image should be displayed at all times.
 
