@@ -10,7 +10,6 @@
 - [Skeleton](#Skeleton)
 - [Wireframes](#Wireframes)
 - [Surface](#Surface)
-- [Implemented Features](#Implemented-Features)
 - [Features](#Features)
 - [Game](#Game)
 - [Technologies Used](#Technologies-Used)
@@ -115,7 +114,7 @@ The page will consist of:
 - 4 buttons below the container for the user to click input the answers.
 - A footer which will display the developer information.
 
-## Wiresframes
+## Wireframes
 
 ### Desktop 
 
@@ -338,7 +337,7 @@ All names should be relevant and as consistant as possible to enable the readers
 
 ![Image](assets/images/readme-images/jshint-validator-results.png)
 
-- Code passed the W3 HTML validator on second attempt, after fixing 2 bugs (see fixed bugs)
+- Code passed the W3 HTML validator on second attempt, after fixing 2 bugs [See fixed bugs](TESTING.md)
 
 ![Image](assets/images/readme-images/html-validator-passed.png)
 
@@ -391,13 +390,14 @@ Credit:[Stack Overflow](https://stackoverflow.com/questions/2450954/how-to-rando
 
 
 ### Images
-
-The background image is open source provided by Ylanite Koppens on [www.pexels.com](https://www.pexels.com/photo/beige-analog-gauge-697662/)
-
-All the flag images were opensource and taken from [www.countryflags.com](https://www.countryflags.com/en/wales-flag-image.html)
+- The background image is open source provided by Ylanite Koppens on [www.pexels.com](https://www.pexels.com/photo/beige-analog-gauge-697662/)
+- All the flag images were opensource and taken from [www.countryflags.com](https://www.countryflags.com/en/wales-flag-image.html)
 
 
-
+### Acknowledgements
+- Friends and family for their honest opinions, checking responsiveness on their devices and spell checking!
+- Code Institute slack channel @robinz_alumni and @Clint and for their very helpful advice.
+- Mentor Rohit Sharma for his excellent guidance and advice.
 
 
 
