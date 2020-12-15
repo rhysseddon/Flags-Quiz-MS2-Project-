@@ -2,35 +2,57 @@
 
 ## Contents
 
-- [Purpose](#Purpose)
-- [User Stories](#User-Stories)
-- [Strategy](#Strategy)
-- [Scope](#Scope)
-- [Structure](#Structure)
-- [Skeleton](#Skeleton)
-- [Wireframes](#Wireframes)
-- [Surface](#Surface)
-- [Features](#Features)
-- [Game](#Game)
-- [Technologies Used](#Technologies-Used)
-- [Testing](TESTING.md)
-- [Best Practices](#Best-Practices)
-- [Deployment](#Deployment)
-- [Credits](#Credits)
+* [Purpose](#Purpose)
+* [User Stories](#User-Stories)
+* [UX](#UX)
+    * [Strategy](#Strategy)
+        * [Research](#Research)
+        * [User Expectations](#User-Expectations)
+    * [Scope](#Scope)
+    * [Structure](#Structure)
+    * [Skeleton](#Skeleton)
+    * [Wireframes](#Wireframes)
+    * [Surface](#Surface)
+        * [Theme](Theme)
+        * [Typography](Typography)
+        * [Colour Scheme](Colour-Scheme)
+* [Features](#Features)
+    * [Implemented Features](#Implemented-Features)
+    * [Features Left out](#Features-Left-Out)
+    * [Features To Add Later](#Features-To-Add-Later)
+* [Game](#Game)
+    * [Start](#Start)
+    * [Playing The Game](#Playing-The-Game)
+* [Technologies Used](#Technologies-Used)
+    * [Languages](#Languages)
+    * [Libraries](#Libraries)
+    * [IDE And Version Control](#IDE-And-Version-Control)
+    * [Tools](#Tools)
+* [Testing](TESTING.md)
+* [Best Practices](#Best-Practices)
+    * [Naming Conventions](#Naming-Conventions)
+    * [Code Validation](#Code-Validation)
+* [Deployment](#Deployment)
+    * [Hosting](#Hosting)
+    * [Local Deployment To Browser](#Local-Deployment-To-Browser)
+    * [Cloning To IDE](#Cloning-To-IDE)
+* [Credits](#Credits)
+    * [Problems Encountered](#Problems-Encountered)
+    * [Images](#Images)
+    * [Acknowledgements](#Acknowledgements)
 
 ## Purpose
-
 The flags quiz game is a fun and educational tool used to test or improve your knowledge of the world’s flags. A flag is displayed to the user and they will have to input the correct country that the flag belongs to. 
 The reason for creating this project is for my second milestone project for a software development course I am undertaking with the Code Institute.
 
 ## User Stories
-
 - User 1: "I am wanting to learn the flags of the world to improve my geography knowledge."
 - User 2: "I need to learn the flags of the world as a part of my course and would like to be able to do it easily on mobile phone so I can play it on the train."
 - User 3: "I am bored and would like to play a game to keep me entertained."
 
-## Strategy
+## UX
 
+## Strategy
 As the site owner my goal is to build a game to make learning the flags of the world a fun experience, as when having fun whilst learning is proven to make students more engaged whilst also helping students retain information better because the process is both enjoyable and memorable. 
 
 The target audience of the game is:
@@ -68,7 +90,6 @@ Has a reset button | Page looks cluttered
 Different levels | Gives all the wrong answers at the end – too much information to remember
 
 ### User Expectations
- 
  The user should:
 
  -  Be able to navigate the game easily.
@@ -80,7 +101,6 @@ Different levels | Gives all the wrong answers at the end – too much informati
 
 
 ## Scope
-
 Based upon the strategy the features and functionality I want to include are as follows:
 -   A message to welocome the user.
 -	Single page to keep navigation easy.
@@ -100,13 +120,11 @@ Based upon the strategy the features and functionality I want to include are as 
 
 
 ## Structure
-
 The site will need to be suited to a target audience of pretty much any age group so will be structured in a linear format with clean UX keeping the users’ expectations as the main priority.  
 The site will be made up of 1 page – the flags will display inside a central conatainer with the 4 clickable answers below and a modal pop up at the start and end of the game.
 
 
 ## Skeleton
-
 The page will consist of: 
 - A header which will include a reset button, game title and scores.
 - A pop up modal at the start and end of the game.
@@ -252,7 +270,7 @@ The use of vibrant colours to convey a sense of fun and matching in with the geo
 #### Footer
 - Should contain small centralised text displaying "Developed by Rhys Seddon"
 
-### Features left out
+### Features Left out
 - I decided to leave out the "correct"/"incorrect" messages from displaying on top of the flags, as the flags are many different colours it would be difficult to 
 clearly display the messages without looking compromised from the similar colours from the flags. 
 
@@ -266,7 +284,7 @@ with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world.
  - When a user enters the site the start pop up modal should display above the first flag. 
  - After the user clicks "Begin", the pop up modal should disappear and the game will begin.
 
-### Playing the Game
+### Playing The Game
 1. The first flag should display with the flag count and score both set to 0. 
 2. When a correct answer is clicked the clicked button should turn green, after 2 seconds the score and flag count should increase by 1.
 3. When a incorrect answer is clicked the clicked button should turn red, and after a 2 second delay the correct answer button should turn green and the flag count should increase by 1.
@@ -278,7 +296,6 @@ with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world.
 ## Technologies Used
 
 ### Languages
-
 - Html: Used for the site structure.
 
 - CSS: Used for adding styles to the website.
@@ -286,13 +303,11 @@ with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world.
 - Javascript: Used to game interactive features.
 
 ### Libraries
-
 - Bootstrap 4 : Used for the start and end modals and used the bootstap grid system for responsiveness of the header.
 
 - JQuery: Used to simplify to HTML DOM tree traversal and manupulation as well as event handling and CSS animation. 
 
 ### IDE And Version Control
-
 - Gitpod: Used as IDE environment.
 
 - Git: Used for verion control.
@@ -300,7 +315,6 @@ with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world.
 - Github: Used for verion control and hosting.
 
 ### Tools
-
 - [Google fonts](http://Fonts.google.com) - Used to obtain the Cinzel font.
 
 - [Coolers.co](http://Coolers.co) - Used for help with deciding on colour scheme.
@@ -318,13 +332,11 @@ with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world.
 - Google Chrome DevTools - Used for testing website responsiveness.
 
 ## Testing
-
 For the testing page [(click Here)](TESTING.md)
 
 ## Best Practices
 
 ### Naming Conventions
-
 All names should be relevant and as consistant as possible to enable the readers to understand the coding quickly and efficiently.
 
 - Javacript variables and functions are written in camelCase. 
@@ -348,7 +360,6 @@ All names should be relevant and as consistant as possible to enable the readers
 ## Deployment
 
 ### Hosting
-
 The website is hosted on GitHub pages on GitHub.com, where i saved all my repositories. The method I used for deployement was as follows:
 
 - Logged into GitHub.com.
@@ -364,16 +375,15 @@ The website is hosted on GitHub pages on GitHub.com, where i saved all my reposi
 - Open my repositories.
 - Click code and download zip.
 
-![Image](assets/readme-images/local-deployment.png)
+![Image](assets/images/readme-images/local-deployment.png)
 
 - Extract the zip file and once downloaded, open index.html in a browser.
 
 ### Cloning To IDE
-
 - Login to GitHub.com.
 - Open my repositories.
 - Click "Code" then under "Clone" copy the link with the HTTPS URL.  
-![Image](assets/readme-images/local-deployment.png)
+![Image](assets/images/readme-images/local-deployment.png)
 - Go to the terminal in your IDE environment. 
 - Change the working directory to where you want the clone to be saved by typing `cd` and the name of the directory.
 - Type `git clone` and paste the copied HTTPS URL.
