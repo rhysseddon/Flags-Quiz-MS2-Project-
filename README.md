@@ -1,5 +1,24 @@
 # Flags Quiz
 
+## Contents
+
+- [Purpose](#Purpose)
+- [User Stories](#User-Stories)
+- [Strategy](#Strategy)
+- [Scope](#Scope)
+- [Structure](#Structure)
+- [Skeleton](#Skeleton)
+- [Wireframes](#Wireframes)
+- [Surface](#Surface)
+- [Implemented Features](#Implemented-Features)
+- [Features](#Features)
+- [Game](#Game)
+- [Technologies Used](#Technologies-Used)
+- [Testing](TESTING.md)
+- [Best Practices](#Best-Practices)
+- [Deployment](#Deployment)
+- [Credits](#Credits)
+
 ## Purpose
 
 The flags quiz game is a fun and educational tool used to test or improve your knowledge of the world’s flags. A flag is displayed to the user and they will have to input the correct country that the flag belongs to. 
@@ -96,9 +115,9 @@ The page will consist of:
 - 4 buttons below the container for the user to click input the answers.
 - A footer which will display the developer information.
 
-### Wiresframes
+## Wiresframes
 
-#### Desktop 
+### Desktop 
 
 <details>
 <summary>Desktop Modal (Click for image)</summary>
@@ -129,7 +148,7 @@ The page will consist of:
 </p>
 </details>
 
-#### Tablet
+### Tablet
 
 <details>
 <summary>Ipad Start Modal (Click for image)</summary>
@@ -163,7 +182,7 @@ The page will consist of:
 </p>
 </details>
 
-#### Mobile 
+### Mobile 
 <details>
 <summary>Iphone Start Modal (Click for image)</summary>
 <p align="center">
@@ -209,15 +228,17 @@ The font used will be Cinzel as it has a geographical old map feel. It will rema
 ### Colour Scheme
 The use of vibrant colours to convey a sense of fun and matching in with the geographical theme. The colour of the background shouldn't clash with the colours of the flags.
 
-## Implemented Features
+## Features
 
-### Header
+### Implemented Features
+
+#### Header
 
 - Reset button on left hand side, with same colour as the bottom multi choice buttons.
 - Central title of the game "Flags Quiz".
 - On the right side the flag count "Flag: 40/50" and below it the score "Score: 10".
 
-### Central Container 
+#### Central Container 
 - Central container which will display the flags, 75% width on desktop, 100% on tablet and mobile.
 - Below the flag four clickable buttons displaying the answers which should be the same colour as the reset button.
  
@@ -229,14 +250,14 @@ The use of vibrant colours to convey a sense of fun and matching in with the geo
 - If the user has a high score it should display the centralised text "Welldone!, you scored: _their score_" and below a "Restart" button.
 - If the user has a low score it should display the centralised text "Bad Luck!, you scored: _their score_" and below a "Restart" button.
 
-### Footer
+#### Footer
 - Should contain small centralised text displaying "Developed by Rhys Seddon"
 
-#### Features left out
+### Features left out
 - I decided to leave out the "correct"/"incorrect" messages from displaying on top of the flags, as the flags are many different colours it would be difficult to 
 clearly display the messages without looking compromised from the similar colours from the flags. 
 
-#### Features To Add later
+### Features To Add later
 - At a later time an increased amount of flags or questions could be added. Or the user could customise the amount of questions
  wtih the start pop up modal asking the user how many questions they would like to answer
 with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world. 
@@ -299,21 +320,21 @@ with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world.
 
 ## Testing
 
-[TESTING.md](TESTING.md)
+[Click Here](TESTING.md)
 
 ## Best Practices
 
 ### Naming Conventions
 
-Javacript variable and function naming conventions...........
+All names should be relevant and as consistant as possible to enable the readers to understand the coding quickly and efficiently.
 
-class names.......
-
-Files names and CSS attributes names have been kept as relevant and consistant as possible.........
+- Javacript variables and functions are written in camelCase. 
+- Class and IDs are written in lowercase and multi word names are joined with a hyphen.
+- File names and image names are written in lowercase and multi word names are joined with a hyphen.
 
 ### Code Validation
 
-- jsHint validator test.(see outstanding bugs)
+- jsHint validator test. [See outstanding bugs](TESTING.md)
 
 ![Image](assets/images/readme-images/jshint-validator-results.png)
 
@@ -321,7 +342,7 @@ Files names and CSS attributes names have been kept as relevant and consistant a
 
 ![Image](assets/images/readme-images/html-validator-passed.png)
 
-- CSS W3 validator had 2 errors (see outstanding bugs)
+- CSS W3 validator had 2 errors. [See outstanding bugs](TESTING.md)
 
 ![Image](![Image](assets/images/readme-images/css-validator.png)
 
@@ -350,21 +371,23 @@ For local deployment:
 
 - Extract the zip file and once downloaded, open index.html in a browser.
 
-### Other deployment............
+
 
 ## Credits
-- Helped with building a function to change the text value on click.
-[Stack Overflow](https://stackoverflow.com/questions/39815945/if-html-text-equals-value-onclick-change)
-[Stack Overflow `match` keyword](https://stackoverflow.com/questions/14510261/jquery-if-this-contains)
+
+### Problems Encountered
+- Helped with building a function to change the text value on click.  
+Credit: [Stack Overflow](https://stackoverflow.com/questions/39815945/if-html-text-equals-value-onclick-change)  
+Credit: [Stack Overflow `match` keyword](https://stackoverflow.com/questions/14510261/jquery-if-this-contains)
 - Used the "Dustenfeld shuffle" to create a function to shuffle the answers.
 Credit:[Stack Overflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
 
 
 ### Images
 
-Background image.......
+The background image is open source provided by Ylanite Koppens on [www.pexels.com](https://www.pexels.com/photo/beige-analog-gauge-697662/)
 
-flag images from https://www.countryflags.com/en/wales-flag-image.html
+All the flag images were opensource and taken from [www.countryflags.com](https://www.countryflags.com/en/wales-flag-image.html)
 
 
 
