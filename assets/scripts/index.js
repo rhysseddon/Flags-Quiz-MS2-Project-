@@ -2,6 +2,7 @@ const flags = ["wales", "ireland", "india", "argentina", "chile"];
 let flagCount = 0;
 let score = 0;
 const countries = ["wales", "ireland", "india", "argentina", "chile"];
+
 /**
  * This function shuffles the countries array into a random order.
  * @param {Array} countries The countries that will be displayed 
@@ -13,6 +14,7 @@ function shuffleArray(countries) {
         [countries[index], countries[countryIndex]] = [countries[countryIndex], countries[index]];
     }
 }
+
 /**
  * This function adds the countries to the buttons text. 
  * Takes countries array and shuffles it, adds 3 countries to shuffledArray,
@@ -33,6 +35,7 @@ function resetAnswers() {
     $(".answer-bottom-left").text(shuffledArray[2]);
     $(".answer-bottom-right").text(shuffledArray[3]);
 }
+
 /**
  * Renders the next question.
  */
@@ -42,6 +45,7 @@ function renderNextQuestion() {
     nextFlag();
     endGame();
 }
+
 /**
  * Evaluates the answer, if it is correct it increments the score and the flag 
  * count and renders the next question.
@@ -61,6 +65,7 @@ function evaluateAnswer(incrementScore) {
         renderNextQuestion();
     }, 2000);
 }
+
 /**
  * Changes the colour of the selected answer. 
  * If answer is correct turns clicked button green.
@@ -82,12 +87,14 @@ function playGame() {
         evaluateAnswer(false);
     }
 }
+
 /**
  * Changes the flag to the next flag in the flags array.
  */
 function nextFlag() {
     $(".flag").attr("src", "assets/images/" + flags[flagCount] + "-flag.jpg");
 }
+
 /**
  * Resets the background colour of the buttons and re-enables the buttons.
  */
@@ -95,6 +102,7 @@ function resetButtons() {
     $(".answer-button").css("background-color", "#df9a57");
     $(".answer-button").attr("disabled", false);
 }
+
 /**
  * Displays end modal
  * If flagCount is equal to number of flags in flags array then display 
@@ -115,6 +123,7 @@ function endGame() {
         $("#endModal").modal("show");
     }
 }
+
 /**
  * Resets the game.
  */
@@ -125,6 +134,7 @@ function resetGame() {
     $(".score").text("Score: " + score);
     renderNextQuestion();
 }
+
 /**
  * Displays start modal. Resets the game when the reset button is clicked.
  * Listens for clicked events for answer buttons and renders the next question. 

@@ -40,9 +40,9 @@ The flags quiz game is a fun and educational tool used to test or improve your k
 The reason for creating this project is for my second milestone project for a software development course I am undertaking with the Code Institute.
 
 ## User Stories
-- User 1: "I am wanting to learn the flags of the world to improve my geography knowledge."
-- User 2: "I need to learn the flags of the world as a part of my course and would like to be able to do it easily on mobile phone so I can play it on the train."
-- User 3: "I am bored and would like to play a game to keep me entertained."
+- User 1: "As a visiting user I am wanting to learn the flags of the world to improve my geography knowledge."
+- User 2: "As a visiting user I would like to see the number of questions available for me to answer."
+- User 3: "As a visiting user I would like to be able to reset the game when I reach the end."
 
 ## UX
 
@@ -122,7 +122,7 @@ The site will be made up of 1 page – the flags will display inside a central c
 The page will consist of: 
 - A header which will include a reset button, game title and scores.
 - A pop up modal at the start and end of the game.
-- A central container which will display the flags and "correct"/"incorrect messages.
+- A central container which will display the flags.
 - 4 buttons below the container for the user to click input the answers.
 - A footer which will display the developer information.
 

@@ -147,26 +147,26 @@ I requested some feedback from friends and family on the how website displays on
 
 ## User Story Testing Outcomes
 
-- User 1:  "I am wanting to learn the flags of the world to improve my geography knowledge."
+- User 1: "I am wanting to learn the flags of the world to improve my geography knowledge."
 
 The game is designed in a way to show the different flags to the user aswell as informing them of the answers when they do not know the answer, 
 this will improve their knowledge of the flags of the world.
 
 ![Image](assets/images/readme-images/incorrect-screenshot.png)
 
-- User 2: - User 2: "I need to learn the flags of the world as a part of my course and would like to be able to do it 
-easily on mobile phone so I can play it on the train."
+- User 2: "As a visiting user I would like to see the number of questions available for me to answer"
 
-The game is mobile responsive so it will give the user the ability to play the game on the go via their mobile phone.
+The flag count displays the amount of flags and will increment after every question informing the user how many questions are available to answer. 
 
-![Image](assets/images/readme-images/mobile-view-screenshot.png)
+![Image](assets/images/readme-images/flag-count-screenshot.png)
 
-- User 3: I am bored and would like to play a game to keep me entertained.
+- User 3: "As a visiting user I would like to be able to reset the game when I reach the end."
 
-The game is has a colourful and clean UX which is entertaining and asks the user if they want to restart at the end of the game which should keep the 
-user playing the game. 
+The reset button will allow the user to reset the game at any point and the restart button on the end modal will reset the game at the end. 
 
-![Image](assets/images/readme-images/user3-screenshot.png)
+![Image](assets/images/readme-images/reset-button-screenshot.png)
+
+![Image](assets/images/readme-images/end-modal-screenshot.png)
 
 ## Fixed Bugs
 - Encountered some problems with centering the bootstrap modal text and button. Was resolved using the bootstrap class `d block` and the CSS `text-align: center`.  
@@ -182,7 +182,6 @@ on the start modal, which was copied across form the bootstrap library for the m
 
 ## Outstanding Bugs
 
-- CSS validatior had 2 errors both were from the bootstaps CDN so were unable to be resolved.
-- JSHint javascript validator showed an undefined varible error ($) which was unable to be resolved as the vaildator test does not recognise the JQuery. 
+- CSS validatior had 2 errors both were from the bootstaps CDN so were unable to be resolved. 
 
-## Return to [README.md](README.md)
+### Return to [README.md](README.md)
