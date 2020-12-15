@@ -29,7 +29,7 @@
 * [Deployment](#Deployment)
     * [Hosting](#Hosting)
     * [Local Deployment To Browser](#Local-Deployment-To-Browser)
-    * [Cloning To IDE](#Cloning-To-IDE)
+    * [Cloning](#Cloning)
 * [Credits](#Credits)
     * [Problems Encountered](#Problems-Encountered)
     * [Images](#Images)
@@ -370,7 +370,7 @@ The website is hosted on GitHub pages on GitHub.com, where I save all my reposit
 
 - Extract the zip file and once downloaded, open index.html in a browser.
 
-### Cloning To IDE
+### Cloning
 - Login to GitHub.com.
 - Open my repositories.
 - Click "Code" then under "Clone" copy the link with the HTTPS URL.  
@@ -378,7 +378,7 @@ The website is hosted on GitHub pages on GitHub.com, where I save all my reposit
 - Go to the terminal in your IDE environment. 
 - Change the working directory to where you want the clone to be saved by typing `cd` and the name of the directory.
 - Type `git clone` and paste the copied HTTPS URL.
-- After pressing enter the clone will be saved to your chosen directory in your IDE enviroment.   
+- After pressing enter the clone will be saved to your chosen directory.   
 
 ## Credits
 
