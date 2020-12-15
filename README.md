@@ -320,7 +320,7 @@ with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world.
 
 ## Testing
 
-[Click Here](TESTING.md)
+For the testing page [(click Here)](TESTING.md)
 
 ## Best Practices
 
@@ -344,7 +344,7 @@ All names should be relevant and as consistant as possible to enable the readers
 
 - CSS W3 validator had 2 errors. [See outstanding bugs](TESTING.md)
 
-![Image](![Image](assets/images/readme-images/css-validator.png)
+![Image](assets/images/readme-images/css-validator.png)
 
 ## Deployment
 
@@ -359,19 +359,26 @@ The website is hosted on GitHub pages on GitHub.com, where i saved all my reposi
 - Under source section selected branch > master and folder > root.
 - Upon saving this my website was successfully deployed to [https://rhysseddon.github.io/Flags-Quiz-MS2-Project-/](https://rhysseddon.github.io/Flags-Quiz-MS2-Project-/)
 
-### Local Deployment
-
-For local deployment:
+### Local Deployment To Browser 
 
 - Login to GitHub.com.
 - Open my repositories.
 - Click code and download zip.
 
-![Image](assets/readme-images/local-deployment-image.png..............)
+![Image](assets/readme-images/local-deployment.png)
 
 - Extract the zip file and once downloaded, open index.html in a browser.
 
+### Cloning To IDE
 
+- Login to GitHub.com.
+- Open my repositories.
+- Click "Code" then under "Clone" copy the link with the HTTPS URL.  
+![Image](assets/readme-images/local-deployment.png)
+- Go to the terminal in your IDE environment. 
+- Change the working directory to where you want the clone to be saved by typing `cd` and the name of the directory.
+- Type `git clone` and paste the copied HTTPS URL.
+- After pressing enter the clone will be saved to your chosen directory in your IDE enviroment.   
 
 ## Credits
 

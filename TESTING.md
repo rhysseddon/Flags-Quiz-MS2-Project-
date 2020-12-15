@@ -70,15 +70,17 @@ Website should appear as follows on a desktop:
 
 ### Tablet View
 
-Website should appear as follows on mobile (example used Moto G4):
+Website should appear as follows on a tablet (example used Ipad):
 
-![Image](assets/images/readme-images/mobile-view-screenshot.png)
+![Image](assets/images/readme-images/tablet-view-screenshot.png)
+
 
 ### Mobile View
 
-Website should appear as follows on mobile (example used Ipad):
 
-![Image](assets/images/readme-images/tablet-view-screenshot.png)
+Website should appear as follows on a mobile (example used Moto G4):
+
+![Image](assets/images/readme-images/mobile-view-screenshot.png)
 
 ## Devtools
 
@@ -150,11 +152,11 @@ Credit: [Stack Overflow](https://stackoverflow.com/questions/2191419/jquery-cont
  them again once the next question had rendered, using `$(".answer-button").attr("disabled", true);` and  `$(".answer-button").attr("disabled", false);`
 - On the first attempt the HTML validator failed as there was an unnecessary type attribute on the link to the index.js page, and an obselete attribute 
 on the start modal, which was copied across form the bootstrap library for the modal.  
-![Image](assets/images/readme-images/failed-html-validator-test.png)
+![Image](assets/images/readme-images/failed-html-validator.png)
 
 ## Outstanding Bugs
 
-- CSS validatior had 1621 errors all were from the bootstaps CDN so were unable to be resolved.
+- CSS validatior had 2 errors both were from the bootstaps CDN so were unable to be resolved.
 - JSHint javascript validator showed an undefined varible error ($) which was unable to be resolved as the vaildator test does not recognise the JQuery. 
 
 ## Return to [README.md](README.md)
