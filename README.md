@@ -387,16 +387,16 @@ The website is hosted on GitHub pages on GitHub.com, where I save all my reposit
 ## Credits
 
 ### Problems Encountered
-- Helped with building a function to change the text value on click.  
+- Helped with building a function to change the text value on click and by using the `match` keyword.  
 Credit: [Stack Overflow](https://stackoverflow.com/questions/39815945/if-html-text-equals-value-onclick-change)  
-Credit: [Stack Overflow `match` keyword](https://stackoverflow.com/questions/14510261/jquery-if-this-contains)
+Credit: [Stack Overflow](https://stackoverflow.com/questions/14510261/jquery-if-this-contains)
 - Used the "Dustenfeld shuffle" to create a function to shuffle the answers.
 Credit:[Stack Overflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
 
 
 ### Images
-- The background image is open source provided by Ylanite Koppens on [www.pexels.com](https://www.pexels.com/photo/beige-analog-gauge-697662/)
-- All the flag images were opensource and taken from [www.countryflags.com](https://www.countryflags.com/en/wales-flag-image.html)
+- The background image is open source provided by Ylanite Koppens here on [www.pexels.com](https://www.pexels.com/photo/beige-analog-gauge-697662/)
+- All the flag images were opensource and taken from here on [www.countryflags.com](https://www.countryflags.com/en/wales-flag-image.html)
 
 
 ### Acknowledgements

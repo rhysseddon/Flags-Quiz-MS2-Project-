@@ -2,24 +2,24 @@
 
 ## Contents
 
-[Background Image](#Background-Image])  
-[Start Modal](#Start-Modal)
-[Header](#Header)
-[Start](#Start)
-[Playing the Game](#Playing-the-Game)
-[End Modal](#End-Modal)
-[Desktop view](#Desktop-view)
-[Tablet View](#Tablet-View)
-[Mobile View](#Mobile-View)
-[Devtools](#Devtools)
-[Browsers](#Browsers)
-[Friends and family](#Friends-and-family)
-[Mobile Friendly Test](#Mobile-Friendly-Test)
-[User Story Testing Outcomes](#User-Story-Testing-Outcomes)
-[Fixed Bugs](#Fixed-Bugs)
-[Outstanding Bugs](#Outstanding-Bugs)
+- [Background Image](#Background-Image])  
+- [Start Modal](#Start-Modal)
+- [Header](#Header)
+- [Start](#Start)
+- [Playing the Game](#Playing-the-Game)
+- [End Modal](#End-Modal)
+- [Desktop view](#Desktop-view)
+- [Tablet View](#Tablet-View)
+- [Mobile View](#Mobile-View)
+- [Devtools](#Devtools)
+- [Browsers](#Browsers)
+- [Friends and family](#Friends-and-family)
+- [Mobile Friendly Test](#Mobile-Friendly-Test)
+- [User Story Testing Outcomes](#User-Story-Testing-Outcomes)
+- [Fixed Bugs](#Fixed-Bugs)
+- [Outstanding Bugs](#Outstanding-Bugs)
 
-## Return to [README.md](README.md)
+#### Return to [README.md](README.md)
 
 ## Favicon
 - A purple flag should display as the favicon once the page has loaded.
