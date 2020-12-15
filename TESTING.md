@@ -1,5 +1,26 @@
 # Testing
 
+## Contents
+
+[Background Image](#Background-Image])  
+[Start Modal](#Start-Modal)
+[Header](#Header)
+[Start](#Start)
+[Playing the Game](#Playing-the-Game)
+[End Modal](#End-Modal)
+[Desktop view](#Desktop-view)
+[Tablet View](#Tablet-View)
+[Mobile View](#Mobile-View)
+[Devtools](#Devtools)
+[Browsers](#Browsers)
+[Friends and family](#Friends-and-family)
+[Mobile Friendly Test](#Mobile-Friendly-Test)
+[User Story Testing Outcomes](#User-Story-Testing-Outcomes)
+[Fixed Bugs](#Fixed-Bugs)
+[Outstanding Bugs](#Outstanding-Bugs)
+
+## Return to [README.md](README.md)
+
 ## Background Image
 - The background image should be displayed at all times.
 
@@ -62,20 +83,20 @@
 
 ![Image](assets/images/readme-images/end-modal-screenshot.png)
 
-### Desktop view
+## Desktop view
 
 Website should appear as follows on a desktop:
 
 ![Image](assets/images/readme-images/desktop-screenshot.png)
 
-### Tablet View
+## Tablet View
 
 Website should appear as follows on a tablet (example used Ipad):
 
 ![Image](assets/images/readme-images/tablet-view-screenshot.png)
 
 
-### Mobile View
+## Mobile View
 
 
 Website should appear as follows on a mobile (example used Moto G4):
