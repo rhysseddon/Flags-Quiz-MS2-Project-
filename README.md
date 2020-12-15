@@ -6,16 +6,11 @@
 * [User Stories](#User-Stories)
 * [UX](#UX)
     * [Strategy](#Strategy)
-        * [Research](#Research)
-        * [User Expectations](#User-Expectations)
     * [Scope](#Scope)
     * [Structure](#Structure)
     * [Skeleton](#Skeleton)
     * [Wireframes](#Wireframes)
     * [Surface](#Surface)
-        * [Theme](Theme)
-        * [Typography](Typography)
-        * [Colour Scheme](Colour-Scheme)
 * [Features](#Features)
     * [Implemented Features](#Implemented-Features)
     * [Features Left out](#Features-Left-Out)
@@ -276,7 +271,7 @@ clearly display the messages without looking compromised from the similar colour
 
 ### Features To Add later
 - At a later time an increased amount of flags or questions could be added. Or the user could customise the amount of questions
- wtih the start pop up modal asking the user how many questions they would like to answer
+ with the start pop up modal asking the user how many questions they would like to answer
 with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world. 
 
 ## Game
@@ -289,7 +284,7 @@ with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world.
 2. When a correct answer is clicked the clicked button should turn green, after 2 seconds the score and flag count should increase by 1.
 3. When a incorrect answer is clicked the clicked button should turn red, and after a 2 second delay the correct answer button should turn green and the flag count should increase by 1.
 4. The next flag and new set of possible answers should then display.
-5. Steps 2 to 4 will repeat until the flag count has reached 50/50.
+5. Steps 2 to 4 will repeat until the flag count has reached the maxiumum number of flags available.
 6. The end modal will display.
 7. If the user clicks restart the display will revert back to step 1. 
 
@@ -300,7 +295,7 @@ with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world.
 
 - CSS: Used for adding styles to the website.
 
-- Javascript: Used to game interactive features.
+- Javascript: Used to add the games interactive features.
 
 ### Libraries
 - Bootstrap 4 : Used for the start and end modals and used the bootstap grid system for responsiveness of the header.
@@ -337,7 +332,7 @@ For the testing page [(click Here)](TESTING.md)
 ## Best Practices
 
 ### Naming Conventions
-All names should be relevant and as consistant as possible to enable the readers to understand the coding quickly and efficiently.
+All names should be relevant and as consistant as possible to enable the reader to understand the coding quickly and efficiently.
 
 - Javacript variables and functions are written in camelCase. 
 - Class and IDs are written in lowercase and multi word names are joined with a hyphen.
@@ -360,7 +355,7 @@ All names should be relevant and as consistant as possible to enable the readers
 ## Deployment
 
 ### Hosting
-The website is hosted on GitHub pages on GitHub.com, where i saved all my repositories. The method I used for deployement was as follows:
+The website is hosted on GitHub pages on GitHub.com, where I save all my repositories. The method I used for deployement was as follows:
 
 - Logged into GitHub.com.
 - Opened my repositories.
@@ -373,9 +368,9 @@ The website is hosted on GitHub pages on GitHub.com, where i saved all my reposi
 
 - Login to GitHub.com.
 - Open my repositories.
-- Click code and download zip.
+- Click "code" and "download zip".
 
-![Image](assets/images/readme-images/local-deployment.png)
+![Image](assets/images/readme-images/download-zip-screenshot.png)
 
 - Extract the zip file and once downloaded, open index.html in a browser.
 
@@ -383,7 +378,7 @@ The website is hosted on GitHub pages on GitHub.com, where i saved all my reposi
 - Login to GitHub.com.
 - Open my repositories.
 - Click "Code" then under "Clone" copy the link with the HTTPS URL.  
-![Image](assets/images/readme-images/local-deployment.png)
+![Image](assets/images/readme-images/download-clone-screenshot.png)
 - Go to the terminal in your IDE environment. 
 - Change the working directory to where you want the clone to be saved by typing `cd` and the name of the directory.
 - Type `git clone` and paste the copied HTTPS URL.
