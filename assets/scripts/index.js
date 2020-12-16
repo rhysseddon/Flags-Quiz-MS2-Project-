@@ -60,7 +60,7 @@ function evaluateAnswer(incrementScore) {
             score++;
         }
         flagCount++;
-       changeCounters();
+        changeCounters();
         renderNextQuestion();
     }, 2000);
 }
@@ -90,8 +90,8 @@ function playGame() {
 /**
  * Displays the current flag count and score.
  */
-function changeCounters(){
- $(".flag-count").text("Flag: " + flagCount + "/" + flags.length);
+function changeCounters() {
+    $(".flag-count").text("Flag: " + flagCount + "/" + flags.length);
     $(".score").text("Score: " + score);
 }
 
@@ -146,7 +146,7 @@ function resetGame() {
  * Listens for clicked events for answer buttons and renders the next question. 
  */
 function initializeGame() {
-   changeCounters();
+    changeCounters();
     $("#startModal").modal("show");
     $(".reset-button").on("click", resetGame);
     $(".answer-button").on("click", playGame);
