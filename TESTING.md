@@ -105,7 +105,7 @@
 <summary>Incorrect answer view (Click for image)</summary>
 <p align="center">
 
-![Image](assets/images/readme-images/incorrect-screenshot.png
+![Image](assets/images/readme-images/incorrect-screenshot.png)
 </p>
 </details>
  
@@ -250,7 +250,7 @@ on the start modal, which was copied across form the Bootstrap library for the m
 ![Image](assets/images/readme-images/failed-html-validator.png)
 - When testing I came across the issue that if the user clicked outside of the end modal it would disappear, leaving them with a blank centre container 
 and the buttons still clickable and the flag count and score would also increase when the buttons were clicked. To resolve this issue is added the HTML 
-` data-keyboard="false" data-backdrop="static"` to the end modal to prevent the click event listener anywhere outside of the "Restart" button.
+` data-keyboard="false" data-backdrop="static"` to the end modal to prevent it disappearing when clicking anywhere but the "Restart" button.
 Credit:  [Stack Overflow](https://stackoverflow.com/questions/16152073/prevent-bootstrap-modal-from-disappearing-when-clicking-outside-or-pressing-esca)
 
 ## Outstanding Bugs
