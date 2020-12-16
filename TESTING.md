@@ -1,8 +1,9 @@
 # Testing
 
 ## Contents
-
+- [Favicon](#Favicon)
 - [Background Image](#Background-Image])  
+- [Font](#Font)
 - [Start Modal](#Start-Modal)
 - [Header](#Header)
 - [Start](#Start)
@@ -22,81 +23,84 @@
 #### Return to [README.md](README.md)
 
 ## Favicon
-- A purple flag should display as the favicon once the page has loaded.
+- A purple flag must display as the favicon once the page has loaded.
 
 ![Image](assets/images/readme-images/favicon-screenshot.png)
 
 ## Background Image
-- The background image should be displayed at all times.
+- The background image must be displayed at all times.
 
 ![Image](assets/images/map-image.jpg)
 
+## Font
+- The font Cinzel must be the only font used thought the site. 
+
 ## Start Modal
-- On load a central popup modal should appear over the game.
-- The modal should have background colour of `#df9a57` and the font Cinzel.
-- The modal should display the centralised text "Welcome!, Match the correct country to the flag" and below a "Begin" button.
-- When the begin button is clicked the background colour should flash #5abcb9 and start modal should disappear. 
+- On load a central popup modal must appear over the game.
+- The modal must have background colour of `#df9a57`.
+- The modal must display the centralised text "Welcome!, Match the correct country to the flag" and below a "Begin" button.
+- When the "Begin" button is clicked the background colour must flash #5abcb9 and the start modal must disappear. 
 
 ![Image](assets/images/readme-images/start-modal.png)
 
 
 ## Header
-- The reset button should display on left hand side, with the background colour of `#df9a57` and the font Cinzel.
-- When clicked the reset button background colour should flash #5abcb9 and should reset the game flags, flag count and score. 
-- The title of the game "Flags quiz" should display in the centre in the font Cinzel.
-- On the right side the flag count should display "Flag: *current flag/Number of flags*" In the font Cinzel.
-- Below the flag count the score "Score: *number of times correct answer given* ". In the font Cinzel.
+- The "Reset" button must display on left hand side, with the background colour of `#df9a57`.
+- When clicked the "Reset" button background colour must flash #5abcb9 and must reset the game flags, flag count and score. 
+- The title of the game "Flags Quiz" must display in the centre.
+- On the right side the flag count must display "Flag: *current flag/Number of flags*".
+- Below the flag count the score must display "Score: *number of times correct answer given*".
 
 ![Image](assets/images/readme-images/header-screenshot.png)
 
 ## Start
- - A central container should display a country flag.
- - Below the flag should be 4 buttons they should have the background colour of `#df9a57` and font Cinzel.
- - The buttons should contain the text of 3 random countries and 1 country that matches the flag above. 
- - The text within the 4 buttons should display in a different order every time the page is refreshed and when the reset button is clicked.
- - The flag count should display "Flag: 0/*Number of flags*" and below it the score "Score: 0". 
+ - A central container must display a country flag.
+ - Below the flag must be 4 buttons they must have the background colour of `#df9a57`.
+ - The buttons must contain the text of 3 random countries and 1 country that matches the flag above. 
+ - The text within the 4 buttons must display in a different order every time the page is refreshed and when the reset button is clicked.
+ - The flag count must display "Flag: 0/*Number of flags*" and below it the score "Score: 0". 
  
  ![Image](assets/images/readme-images/start-screenshot.png)
 
 ## Playing the Game
 
 ### Correct Input
-- A correct input should be when the button clicked matches the country of the flag displayed in the central container.   
- - When a correct input is given the button that was clicked background colour should turn green.
- - After a 2 second delay, the flag count should increase by 1, the score should increase by 1 and a new flag should appear.
+ - A correct input must be when the button clicked matches the country of the flag displayed in the central container.   
+ - When a correct input is given the button that was clicked background colour must turn green.
+ - After a 2 second delay, the flag count must increase by 1, the score must increase by 1 and a new flag must appear.
 
  ![Image](assets/images/readme-images/correct-screenshot.png)
 
 ### Incorrect Input
- - An incorrect input should be when the button clicked does not match the country of the flag displayed in the central container. 
+ - An incorrect input must be when the button clicked does not match the country of the flag displayed in the central container. 
  - When a correct input is given the button that was clicked background colour should turn red, the button that matches
-  the country of the flag displayed in the central container should turn green.
- - After a 2 second delay, the flag count should increase by 1 and a new flag should appear.
+  the country of the flag displayed in the central container must turn green.
+ - After a 2 second delay, the flag count must increase by 1 and a new flag must appear.
  
 
  ![Image](assets/images/readme-images/incorrect-screenshot.png)
 
  ## End Modal 
 
- - Once the flag count has reached the maxiumum number of flags available, the end modal should appear.
-- The modal should have background colour of `#df9a57` and the font Cinzel.
-- If the users score is less than 50% of the flag count the modal should display the centralised text "Bad Luck!, and below that "You Scored: *Their score*/*Number of flags* "
-- If the users score is more than 50% of the flag count the modal should display the centralised text "Well Done!, and below that "You Scored: *Their score*/*Number of flags* "
-- Below the text should be a central restart button. 
-- When the restart button is clicked the background colour should flash `#5abcb9`, the modal should disappear 
- and the flag count and score should reset to 0 and the first flag should be displayed again. 
+ - Once the flag count has reached the maxiumum number of flags available, the end modal must appear.
+ - The modal must have background colour of `#df9a57`.
+ - If the users score is less than 50% of the flag count the modal must display the centralised text "Bad Luck!, and below that "You Scored: *Their score*/*Number of flags* "
+ - If the users score is more than 50% of the flag count the modal must display the centralised text "Well Done!, and below that "You Scored: *Their score*/*Number of flags* "
+ - Below the text must be a central restart button. 
+ - When the restart button is clicked the background colour smust flash `#5abcb9`, the modal must disappear 
+  and the flag count and score must reset to 0 and the first flag must be displayed again. 
 
 ![Image](assets/images/readme-images/end-modal-screenshot.png)
 
 ## Desktop view
 
-Website should appear as follows on a desktop:
+Website must appear as follows on a desktop:
 
 ![Image](assets/images/readme-images/desktop-screenshot.png)
 
 ## Tablet View
 
-Website should appear as follows on a tablet (example used Ipad):
+Website must appear as follows on a tablet (example used Ipad):
 
 ![Image](assets/images/readme-images/tablet-view-screenshot.png)
 
@@ -104,13 +108,13 @@ Website should appear as follows on a tablet (example used Ipad):
 ## Mobile View
 
 
-Website should appear as follows on a mobile (example used Moto G4):
+Website must appear as follows on a mobile (example used Moto G4):
 
 ![Image](assets/images/readme-images/mobile-view-screenshot.png)
 
 ## Devtools
 
-The website was extensively tested for responsiveness in google chrome devtools in the following devices:
+The website was extensively tested for responsiveness in Google Chrome Devtools on the following devices:
 
 - Moto G4
 - Galaxy S5
@@ -129,27 +133,27 @@ The website was extensively tested for responsiveness in google chrome devtools 
 
 The website was tested for responsiveness on the following browsers:
 
-- Google chrome
+- Google Chrome
 - Safari
 - Microsoft Edge
 - Firefox
 
 ## Friends and family
 
-I requested some feedback from friends and family on the how website displays on there devices, so was tested on iphone 7, iphone 8,
- iphone 11, ipad and two laptop with computers one with chrome the other with safari, the website looked good on all of these screen sizes.
+I requested some feedback from friends and family on the how the website displays on their devices. It was thereby sucessfully tested on iPhone 7, iPhone 8,
+ iPhone X, iPad, two makes of laptop computer and one desktop this covered Chrome, Microsoft Edge and Safari. 
 
 ## Mobile Friendly Test
 
-- Passed the google mobile friendly test.
+- Passed the Google mobile friendly test.
 
 ![Image](assets/images/readme-images/mobile-friendly-test.png)
 
 ## User Story Testing Outcomes
 
-- User 1: "I am wanting to learn the flags of the world to improve my geography knowledge."
+- User 1: "I am wanting to learn the flags of the world to improve my geographical knowledge."
 
-The game is designed in a way to show the different flags to the user aswell as informing them of the answers when they do not know the answer, 
+The game is designed in a way to show the different flags to the user as well as informing them of the answers when they do not know the answer, 
 this will improve their knowledge of the flags of the world.
 
 ![Image](assets/images/readme-images/incorrect-screenshot.png)
@@ -169,7 +173,7 @@ The reset button will allow the user to reset the game at any point and the rest
 ![Image](assets/images/readme-images/end-modal-screenshot.png)
 
 ## Fixed Bugs
-- Encountered some problems with centering the bootstrap modal text and button. Was resolved using the bootstrap class `d block` and the CSS `text-align: center`.  
+- Encountered some problems with centering the Bootstrap modal text and button. Was resolved using the bootstrap class `d block` and the CSS `text-align: center`.  
 Credit: [Stack Overflow](https://stackoverflow.com/questions/50041065/bootstrap-4-modal-center-content).
 - The jquery selector `:contains` wouldn't implement with a variable, found the solution was to escape the double quotes with single quotes.  
 Credit: [Stack Overflow](https://stackoverflow.com/questions/2191419/jquery-contains-with-a-variable-syntax).
@@ -177,11 +181,11 @@ Credit: [Stack Overflow](https://stackoverflow.com/questions/2191419/jquery-cont
  and next flag would change with every click before the next question could render. I found the solution was to disable the answer buttons after they were clicked and enable 
  them again once the next question had rendered, using `$(".answer-button").attr("disabled", true);` and  `$(".answer-button").attr("disabled", false);`
 - On the first attempt the HTML validator failed as there was an unnecessary type attribute on the link to the index.js page, and an obselete attribute 
-on the start modal, which was copied across form the bootstrap library for the modal.  
+on the start modal, which was copied across form the Bootstrap library for the modal.  
 ![Image](assets/images/readme-images/failed-html-validator.png)
 
 ## Outstanding Bugs
 
-- CSS validatior had 2 errors both were from the bootstaps CDN so were unable to be resolved. 
+- CSS validator had 2 errors both were from the Bootstraps CDN so were unable to be resolved. 
 
 ### Return to [README.md](README.md)

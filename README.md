@@ -36,18 +36,19 @@
     * [Acknowledgements](#Acknowledgements)
 
 ## Purpose
-The flags quiz game is a fun and educational tool used to test or improve your knowledge of the world’s flags. A flag is displayed to the user and they will have to input the correct country that the flag belongs to. 
+The Flags quiz game is a fun and educational tool used to test or improve your knowledge of the world’s flags. A flag is displayed to the user and they will have to input the correct country that the flag belongs to. 
 The reason for creating this project is for my second milestone project for a software development course I am undertaking with the Code Institute.
 
 ## User Stories
-- User 1: "As a visiting user I am wanting to learn the flags of the world to improve my geography knowledge."
+- User 1: "As a visiting user I am wanting to learn the flags of the world to improve my geographical knowledge."
 - User 2: "As a visiting user I would like to see the number of questions available for me to answer."
 - User 3: "As a visiting user I would like to be able to reset the game when I reach the end."
 
 ## UX
 
 ## Strategy
-As the site owner my goal is to build a game to make learning the flags of the world a fun experience, as when having fun whilst learning is proven to make students more engaged whilst also helping students retain information better because the process is both enjoyable and memorable. 
+As the site owner my goal is to build a game to make learning the flags of the world a fun experience, as when having fun whilst learning is proven to make students more engaged whilst 
+also helping students retain information better because the process is both enjoyable and memorable. 
 
 The target audience of the game is:
 
@@ -96,7 +97,7 @@ Different levels | Gives all the wrong answers at the end – too much informati
 
 ## Scope
 Based upon the strategy the features and functionality I want to include are as follows:
--   A message to welocome the user.
+-   A message to welcome the user.
 -	Single page to keep navigation easy.
 -	Fun and vibrant colour scheme.
 -	4 Multiple choice answers.
@@ -104,7 +105,7 @@ Based upon the strategy the features and functionality I want to include are as 
 -	Score counter so the user can see how well they are doing.
 -	Provides correct answer so the user can learn and answer correctly next time.
 -	Reset Button
--	The user should be provided with feedback when clicking the answers so that they know an input has been successfully given and weather it is correct or incorrect.
+-	The user should be provided with feedback when clicking the answers so that they know an input has been successfully given and whether it is correct or incorrect.
 -   End message to tell the user how well they did and to let them restart.
  
  Functionality to leave out:
@@ -114,13 +115,13 @@ Based upon the strategy the features and functionality I want to include are as 
 
 
 ## Structure
-The site will need to be suited to a target audience of pretty much any age group so will be structured in a linear format with clean UX keeping the users’ expectations as the main priority.  
-The site will be made up of 1 page – the flags will display inside a central conatainer with the 4 clickable answers below and a modal pop up at the start and end of the game.
+The site will need to be suited to a target audience of any age group so will be structured in a linear format with clean UX keeping the users’ expectations as the main priority.  
+The site will be made up of 1 page – the flags will display inside a central container with the 4 clickable answers below and a modal pop up at the start and end of the game.
 
 
 ## Skeleton
 The page will consist of: 
-- A header which will include a reset button, game title and scores.
+- A header which will include a reset button, game title and score.
 - A pop up modal at the start and end of the game.
 - A central container which will display the flags.
 - 4 buttons below the container for the user to click input the answers.
@@ -230,7 +231,7 @@ The page will consist of:
 
 ### Theme
  
-The game will have a old geographical theme which will correspond well with the topic of flags. 
+The game will have an old geographical theme which will correspond well with the topic of flags. 
 The background picture will need to keep things fun at the same time as not being too distracting.
 
 ### Typography
@@ -258,7 +259,7 @@ The use of vibrant colours to convey a sense of fun and matching in with the geo
 
 #### End Modal
 - When the game ends a pop up modal should display within the central container. 
-- If the user has a high score it should display the centralised text "Welldone!, you scored: _their score_" and below a "Restart" button.
+- If the user has a high score it should display the centralised text "Well Done!, you scored: _their score_" and below a "Restart" button.
 - If the user has a low score it should display the centralised text "Bad Luck!, you scored: _their score_" and below a "Restart" button.
 
 #### Footer
@@ -270,6 +271,7 @@ The use of vibrant colours to convey a sense of fun and matching in with the geo
 with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world. 
 - A high score feature could be added later where on returning to the site the user can see their highest score from previous games.
 - A high score rankings feature could also be added where users can compare their scores with the high scores from other users. 
+- Different difficulty levels. To allow the user to build up their knowledge incrementally.
 
 ## Game
 ### Start
@@ -295,16 +297,16 @@ with a choice of 5 flags, 10 flags, 50 flags or even all 193 flags of the world.
 - Javascript: Used to add the games interactive features.
 
 ### Libraries
-- Bootstrap 4 : Used for the start and end modals and used the bootstap grid system for responsiveness of the header.
+- Bootstrap 4 : Used for the start and end modals and used the Bootstrap grid system for responsiveness of the header.
 
-- JQuery: Used to simplify to HTML DOM tree traversal and manupulation as well as event handling and CSS animation. 
+- JQuery: Used to simplify to HTML DOM tree traversal and manipulation as well as event handling and CSS animation. 
 
 ### IDE And Version Control
 - Gitpod: Used as IDE environment.
 
-- Git: Used for verion control.
+- Git: Used for version control.
 
-- Github: Used for verion control and hosting.
+- Github: Used for version control and hosting.
 
 ### Tools
 - [Google fonts](http://Fonts.google.com) - Used to obtain the Cinzel font.
@@ -329,7 +331,7 @@ For the testing page [(click Here)](TESTING.md)
 ## Best Practices
 
 ### Naming Conventions
-All names should be relevant and as consistant as possible to enable the reader to understand the coding quickly and efficiently.
+All names should be relevant and as consistent as possible to enable the reader to understand the coding quickly and efficiently.
 
 - Javacript variables and functions are written in camelCase. 
 - Class and IDs are written in lowercase and multi word names are joined with a hyphen.
@@ -352,7 +354,7 @@ All names should be relevant and as consistant as possible to enable the reader 
 ## Deployment
 
 ### Hosting
-The website is hosted on GitHub pages on GitHub.com, where I save all my repositories. The method I used for deployement was as follows:
+The website is hosted on GitHub pages on GitHub.com, where I save all my repositories. The method I used for deployment was as follows:
 
 - Logged into GitHub.com.
 - Opened my repositories.
