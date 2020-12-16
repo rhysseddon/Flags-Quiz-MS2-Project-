@@ -60,8 +60,7 @@ function evaluateAnswer(incrementScore) {
             score++;
         }
         flagCount++;
-        $(".flag-count").text("Flag: " + flagCount + "/" + flags.length);
-        $(".score").text("Score: " + score);
+       changeCounters()
         renderNextQuestion();
     }, 2000);
 }
@@ -86,6 +85,14 @@ function playGame() {
             "green");
         evaluateAnswer(false);
     }
+}
+
+/**
+ * Displays the current flag count and score.
+ */
+function changeCounters(){
+ $(".flag-count").text("Flag: " + flagCount + "/" + flags.length);
+    $(".score").text("Score: " + score);
 }
 
 /**
@@ -130,8 +137,7 @@ function endGame() {
 function resetGame() {
     flagCount = 0;
     score = 0;
-    $(".flag-count").text("Flag: " + flagCount + "/" + flags.length);
-    $(".score").text("Score: " + score);
+    changeCounters()
     renderNextQuestion();
 }
 
@@ -140,6 +146,7 @@ function resetGame() {
  * Listens for clicked events for answer buttons and renders the next question. 
  */
 function initializeGame() {
+   changeCounters()
     $("#startModal").modal("show");
     $(".reset-button").on("click", resetGame);
     $(".answer-button").on("click", playGame);
