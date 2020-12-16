@@ -2,7 +2,7 @@
 
 ## Contents
 - [Favicon](#Favicon)
-- [Background Image](#Background-Image])  
+- [Background Image](#Background-Image)  
 - [Font](#Font)
 - [Start Modal](#Start-Modal)
 - [Header](#Header)
@@ -30,23 +30,35 @@
 ## Background Image
 - The background image must be displayed at all times.
 
+<details>
+<summary>Background Image (Click for image)</summary>
+<p align="center">
+
 ![Image](assets/images/map-image.jpg)
+</p>
+</details>
+
 
 ## Font
-- The font Cinzel must be the only font used thought the site. 
+- The font Cinzel must be the only font used throughout the site. 
 
 ## Start Modal
 - On load a central popup modal must appear over the game.
 - The modal must have background colour of `#df9a57`.
 - The modal must display the centralised text "Welcome!, Match the correct country to the flag" and below a "Begin" button.
-- When the "Begin" button is clicked the background colour must flash #5abcb9 and the start modal must disappear. 
+- When the "Begin" button is clicked the background colour must flash `#5abcb9` and the start modal must disappear. 
+
+<details>
+<summary>Start Modal (Click for image)</summary>
+<p align="center">
 
 ![Image](assets/images/readme-images/start-modal.png)
-
+</p>
+</details>
 
 ## Header
 - The "Reset" button must display on left hand side, with the background colour of `#df9a57`.
-- When clicked the "Reset" button background colour must flash #5abcb9 and must reset the game flags, flag count and score. 
+- When clicked the "Reset" button background colour must flash `#5abcb9` and must reset the game flags, flag count and score. 
 - The title of the game "Flags Quiz" must display in the centre.
 - On the right side the flag count must display "Flag: *current flag/Number of flags*".
 - Below the flag count the score must display "Score: *number of times correct answer given*".
@@ -60,7 +72,13 @@
  - The text within the 4 buttons must display in a different order every time the page is refreshed and when the reset button is clicked.
  - The flag count must display "Flag: 0/*Number of flags*" and below it the score "Score: 0". 
  
- ![Image](assets/images/readme-images/start-screenshot.png)
+ <details>
+<summary>Start view (Click for image)</summary>
+<p align="center">
+
+![Image](assets/images/readme-images/start-screenshot.png)
+</p>
+</details>
 
 ## Playing the Game
 
@@ -69,7 +87,13 @@
  - When a correct input is given the button that was clicked background colour must turn green.
  - After a 2 second delay, the flag count must increase by 1, the score must increase by 1 and a new flag must appear.
 
- ![Image](assets/images/readme-images/correct-screenshot.png)
+ <details>
+<summary>Correct answer view (Click for image)</summary>
+<p align="center">
+
+![Image](assets/images/readme-images/correct-screenshot.png)
+</p>
+</details>
 
 ### Incorrect Input
  - An incorrect input must be when the button clicked does not match the country of the flag displayed in the central container. 
@@ -77,9 +101,14 @@
   the country of the flag displayed in the central container must turn green.
  - After a 2 second delay, the flag count must increase by 1 and a new flag must appear.
  
+<details>
+<summary>Incorrect answer view (Click for image)</summary>
+<p align="center">
 
- ![Image](assets/images/readme-images/incorrect-screenshot.png)
-
+![Image](assets/images/readme-images/incorrect-screenshot.png
+</p>
+</details>
+ 
  ## End Modal 
 
  - Once the flag count has reached the maxiumum number of flags available, the end modal must appear.
@@ -87,30 +116,53 @@
  - If the users score is less than 50% of the flag count the modal must display the centralised text "Bad Luck!, and below that "You Scored: *Their score*/*Number of flags* "
  - If the users score is more than 50% of the flag count the modal must display the centralised text "Well Done!, and below that "You Scored: *Their score*/*Number of flags* "
  - Below the text must be a central restart button. 
- - When the restart button is clicked the background colour smust flash `#5abcb9`, the modal must disappear 
+ - When the restart button is clicked the background colour must flash `#5abcb9`, the modal must disappear 
   and the flag count and score must reset to 0 and the first flag must be displayed again. 
 
+
+<details>
+<summary>End Modal (Click for image)</summary>
+<p align="center">
+
 ![Image](assets/images/readme-images/end-modal-screenshot.png)
+</p>
+</details>
 
 ## Desktop view
 
 Website must appear as follows on a desktop:
 
+<details>
+<summary>Desktop view (Click for image)</summary>
+<p align="center">
+
 ![Image](assets/images/readme-images/desktop-screenshot.png)
+</p>
+</details>
 
 ## Tablet View
 
 Website must appear as follows on a tablet (example used Ipad):
 
-![Image](assets/images/readme-images/tablet-view-screenshot.png)
+<details>
+<summary>Tablet view (Click for image)</summary>
+<p align="center">
 
+![Image](assets/images/readme-images/tablet-view-screenshot.png)
+</p>
+</details>
 
 ## Mobile View
 
-
 Website must appear as follows on a mobile (example used Moto G4):
 
+<details>
+<summary>Mobile view (Click for image)</summary>
+<p align="center">
+
 ![Image](assets/images/readme-images/mobile-view-screenshot.png)
+</p>
+</details>
 
 ## Devtools
 
@@ -156,7 +208,14 @@ I requested some feedback from friends and family on the how the website display
 The game is designed in a way to show the different flags to the user as well as informing them of the answers when they do not know the answer, 
 this will improve their knowledge of the flags of the world.
 
+
+<details>
+<summary>Incorrect view (Click for image)</summary>
+<p align="center">
+
 ![Image](assets/images/readme-images/incorrect-screenshot.png)
+</p>
+</details>
 
 - User 2: "As a visiting user I would like to see the number of questions available for me to answer"
 
@@ -170,7 +229,13 @@ The reset button will allow the user to reset the game at any point and the rest
 
 ![Image](assets/images/readme-images/reset-button-screenshot.png)
 
+<details>
+<summary>End modal (Click for image)</summary>
+<p align="center">
+
 ![Image](assets/images/readme-images/end-modal-screenshot.png)
+</p>
+</details>
 
 ## Fixed Bugs
 - Encountered some problems with centering the Bootstrap modal text and button. Was resolved using the bootstrap class `d block` and the CSS `text-align: center`.  
