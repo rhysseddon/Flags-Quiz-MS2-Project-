@@ -389,7 +389,7 @@ The website is hosted on GitHub pages on GitHub.com, where I save all my reposit
 Credit: [Stack Overflow](https://stackoverflow.com/questions/39815945/if-html-text-equals-value-onclick-change)  
 Credit: [Stack Overflow](https://stackoverflow.com/questions/14510261/jquery-if-this-contains)
 - Used the "Dustenfeld shuffle" to create a function to shuffle the answers.  
-Credit:[Stack Overflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+Credit: [Stack Overflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
 
 ### Images
 - The background image is open source provided by Ylanite Koppens here on [www.pexels.com](https://www.pexels.com/photo/beige-analog-gauge-697662/)
