@@ -42,11 +42,10 @@ resetButtons();
 return;
 });
 }
+;
 
 
 
-
-askQuestion("wales");
 
 
 
