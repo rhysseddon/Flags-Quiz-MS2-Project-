@@ -1,49 +1,102 @@
+const flags = ["wales", "ireland", "india", "argentina", "chile"];
+let flagCount = 0;
+let score = 0;
+const countries = ["wales", "ireland", "india", "argentina", "chile"];
 
-// This code is for start pop up modal
-$(document).ready(function() {
-$("#startModal").modal('show');
-resetAnswers();
+/**
+ * This function shuffles the countries array into a random order.
+ * @param {Array} countries The countries that will be displayed 
+ * as the buttons.
+ */
+function shuffleArray(countries) {
+    for (let index = countries.length - 1; index > 0; index--) {
+        let countryIndex = Math.floor(Math.random() * (index + 1));
+        [countries[index], countries[countryIndex]] = [countries[countryIndex], countries[index]];
+    }
+}
 
- });
-// Below code shuffles answers array
+/**
+ * This function adds the countries to the buttons text. 
+ * Takes countries array and shuffles it, adds 3 countries to shuffledArray,
+ * and if the current flag is not one of those 3 counties  it adds the current
+ * flag to the array. Then the array is shuffled again and added to the button 
+ * text.     
+ */
+function resetAnswers() {
+    let shuffledArray = [];
+    do {
+        shuffleArray(countries);
+        shuffledArray = [countries[0], countries[1], countries[2]];
+    } while (shuffledArray.includes(flags[flagCount]));
+    shuffledArray.push(flags[flagCount]);
+    shuffleArray(shuffledArray);
+    $(".answer-top-left").text(shuffledArray[0]);
+    $(".answer-top-right").text(shuffledArray[1]);
+    $(".answer-bottom-left").text(shuffledArray[2]);
+    $(".answer-bottom-right").text(shuffledArray[3]);
+}
 
-var answers = ["wales", "scotland", "ireland", "england"];
-function resetAnswers(){
-function shuffleArray(answers) {
-      for (let i = answers.length -1; i > 0; i--) {
-         j = Math.floor(Math.random() * (i + 1));
-         [answers[i], answers[j]] = [answers[j], answers[i]];
+/**
+ * Renders the next question.
+ */
+function renderNextQuestion() {
+    resetAnswers();
+    resetButtons();
+    nextFlag();
+    endGame();
+}
+
+/**
+ * Evaluates the answer, if it is correct it increments the score and the flag 
+ * count and renders the next question.
+ * If it is incorrect it will increment only the flag count and render the 
+ * next question.   
+ * @param {boolean} incrementScore If correct answer is given increment score
+ * will be true and the score will increment. 
+ */
+function evaluateAnswer(incrementScore) {
+    setTimeout(function () {
+        if (incrementScore === true) {
+            score++;
         }
- }
- // Below code changes answer button text to random answer
-shuffleArray(answers);
-$(".answer1").text(answers[0]);
-$(".answer2").text(answers[1]);
-$(".answer3").text(answers[2]);
-$(".answer4").text(answers[3]);
+        flagCount++;
+        changeCounters();
+        renderNextQuestion();
+    }, 2000);
 }
 
-function resetButtons() {
-    $('.answer-button').css("background-color", "#df9a57");
+/**
+ * Changes the colour of the selected answer. 
+ * If answer is correct turns clicked button green.
+ * If answer is incorrect turns clicked button red and correct answer button 
+ * green.
+ * @param {Object}  answer jQuery object containing the flag current name in
+ * the flags array.
+ */
+function playGame() {
+    $(".answer-button").attr("disabled", true);
+    let answer = flags[flagCount];
+    if ($(this).text().match(answer)) {
+        $(this).css("background-color", "green");
+        evaluateAnswer(true);
+    } else {
+        $(this).css("background-color", "red");
+        $(".answer-button:contains('" + answer + "')").css("background-color",
+            "green");
+        evaluateAnswer(false);
+    }
 }
 
-function askQuestion(flag) {
- $(".flag").attr("src", "assets/images/" + flag + "-flag.jpg");
-$('.answer-button').on('click', function() {
-if ($(this).text().match(flag)) {
-$(this).css("background-color", "green");
- setTimeout( function() {
-resetAnswers();
-resetButtons();
-}, 2000);
-} else {
-    $(this).css("background-color", "red");
-   }
-return;
-});
+/**
+ * Displays the current flag count and score.
+ */
+function changeCounters() {
+    $(".flag-count").text("Flag: " + flagCount + "/" + flags.length);
+    $(".score").text("Score: " + score);
 }
 ;
 
+<<<<<<< HEAD
 
 
 
@@ -74,51 +127,67 @@ question3();
 }
 return;
 });
+=======
+/**
+ * Changes the flag to the next flag in the flags array.
+ */
+function nextFlag() {
+    $(".flag").attr("src", "assets/images/" + flags[flagCount] + "-flag.jpg");
+>>>>>>> d3e21dfb6da8da594d0ebd7a20cb0ff1f2d528dc
 }
 
-
-function question3(){
-var answer = answers[0];
-    setTimeout(function() {
-$(".flag").attr("src", "assets/images/scotland-flag.jpg");
-resetAnswers();
-resetButtons();
-}, 2000);
-$('.answer-button').one('click', function() {
-if ($(this).text().match("scotland")) {
-$(this).css("background-color", "green");
-question4();
-} else {
-    $(this).css("background-color", "red");
-    
-}
-return;
-});
+/**
+ * Resets the background colour of the buttons and re-enables the buttons.
+ */
+function resetButtons() {
+    $(".answer-button").css("background-color", "#df9a57");
+    $(".answer-button").attr("disabled", false);
 }
 
-function question4(){
-var answer = answers[0];
-    setTimeout(function() {
-$(".flag").attr("src", "assets/images/ireland-flag.jpg");
-resetAnswers();
-resetButtons();
-}, 2000);
-$('.answer-button').one('click', function() {
-if ($(this).text().match("ireland")) {
-$(this).css("background-color", "green");
-question4();
-} else {
-    $(this).css("background-color", "red");
-    
+/**
+ * Displays end modal
+ * If flagCount is equal to number of flags in flags array then display 
+ * endmodal.
+ * When score is less than 50% display "Bad luck" on endmodal or else 
+ * display "Well done!".
+ */
+function endGame() {
+    if (flagCount === flags.length) {
+        $(".flag").attr("src", "assets/images/" + flags[0] + "-flag.jpg");
+        if (score < flags.length / 2) {
+            $(".end-modal-title").text("Bad Luck!");
+        } else {
+            $(".end-modal-title").text("Well done!");
+        }
+        $(".end-modal-score").text("You scored: " + score + " /" +
+            flags.length);
+        $("#endModal").modal("show");
+    }
 }
-return;
-});
+
+/**
+ * Resets the game.
+ */
+function resetGame() {
+    flagCount = 0;
+    score = 0;
+    changeCounters();
+    renderNextQuestion();
 }
-*/
 
+/**
+ * Displays start modal. Resets the game when the reset button is clicked.
+ * Listens for clicked events for answer buttons and renders the next question. 
+ */
+function initializeGame() {
+    changeCounters();
+    $("#startModal").modal("show");
+    $(".reset-button").on("click", resetGame);
+    $(".answer-button").on("click", playGame);
+    renderNextQuestion();
+}
 
-
-
-
-
-
+/**
+ * Initializes game when document is loaded.
+ */
+$(document).ready(initializeGame);

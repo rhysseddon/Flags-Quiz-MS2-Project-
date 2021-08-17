@@ -1,4 +1,4 @@
-/* site background image */
+/* Site background image */
 html {
     min-height: 100%;
     background-image: url("../images/map-image.jpg");
@@ -7,32 +7,41 @@ html {
     background-position: center center;
     background-color: grey;
 }
+
+/* Sets font size for whole site */
 body {
     font-family: 'Cinzel', serif;
 }
+
 header {
- position: absolute;
+    position: absolute;
 }
+
+/* Styles the main game title */
 .title {
     font-size: 40px;
     text-align: center;
     color: white;
     margin-top: 8px;
 }
+
+/* Styles the flag count text */
 .flag-count {
     font-size: 30px;
     text-align: right;
     color: white;
     margin-top: 3px;
-
 }
+
+/* Styles the score text */
 .score {
     font-size: 30px;
     text-align: right;
     color: white;
-
 }
-.reset-button {
+
+/* Styles the reset button */
+.reset-button-style {
     font-size: 30px;
     text-align: left;
     background-color: #df9a57;
@@ -42,9 +51,13 @@ header {
     border-radius: 10px;
     margin-top: 17px;
 }
+
+/* Styles all non answer buttons */
 .button-hover:hover {
     background-color: #5abcb9;
 }
+
+/* Styles the flag container */
 .flag {
     position: absolute;
     width: 54%;
@@ -54,50 +67,43 @@ header {
     border: 3px solid black;
     border-radius: 5px;
 }
-.answer1 {
+
+/* Styles all the answer buttons */
+.answer-button {
     position: absolute;
     width: 26%;
+    font-size: 30px;
+    background-color: #df9a57;
+    color: white;
+    padding: 3px 5px 3px 5px;
+    border: 3px solid black;
+}
+
+/* Styles the top left answer button */
+.answer-top-left {
     top: 73%;
     left: 23%;
-    font-size: 30px;
-     background-color: #df9a57; 
-    color: white;
-    padding: 3px 5px 3px 5px;
-    border: 3px solid black;
 }
-.answer2 {
-    position: absolute;
-    width: 26%;
+
+/* Styles the top right answer button */
+.answer-top-right {
     top: 73%;
     right: 23%;
-    font-size: 30px;
- background-color: #df9a57; 
-    color: white;
-    padding: 3px 5px 3px 5px;
-    border: 3px solid black;
 }
-.answer3 {
-    position: absolute;
-    width: 26%;
+
+/* Styles the bottom left answer button */
+.answer-bottom-left {
     top: 85%;
     left: 23%;
-    font-size: 30px;
-     background-color: #df9a57; 
-    color: white;
-    padding: 3px 5px 3px 5px;
-    border: 3px solid black;
 }
-.answer4 {
-    position: absolute;
-    width: 26%;
+
+/* Styles the bottom right answer button */
+.answer-bottom-right {
     top: 85%;
     right: 23%;
-    font-size: 30px;
-    background-color: #df9a57; 
-    color: white;
-    padding: 3px 5px 3px 5px;
-    border: 3px solid black;
 }
+
+/* Styles the information in the footer */
 .footer-info {
     font-size: 12px;
     color: white;
@@ -106,113 +112,158 @@ header {
     text-align: center;
     bottom: 0.5%;
 }
-/* Below code styles the modal */
 
+/* Styles the modal */
 .modal-content {
-    background-color:  #df9a57;
+    background-color: #df9a57;
     color: white;
     text-align: center;
     border: 3px solid black;
     border-radius: 10px;
 }
-.begin-button {
+
+.modal-button-style {
     color: white;
     background-color: #df9a57;
     border: 3px solid black;
     border-radius: 10px;
 }
 
-
-
 /* Ipad and Ipad Pro view */
 @media (max-width: 1024px) {
+
+    /* Styles the main game title in Ipad and Ipad pro view */
     .title {
         font-size: 50px;
     }
-  .flag {
+
+    /* Styles the flag count text in Ipad and ipad pro view */
+    .flag {
         width: 90%;
         height: 40%;
         margin-top: 150px;
         margin-left: 5%;
     }
-.answer1 {
-       width: 42%;
-        top: 60%;
-        left: 5%;
-        font-size: 60px;
-  }
-  .answer2 {
-   width: 42%;
-        top: 60%;
-        right: 5%;
-        font-size: 60px;
-   }
-    .answer3 {
-      width: 42%;
-        top: 74%;
-        left: 5%;
-        font-size: 60px;
-  }
-   .answer4 {
+
+    /* Styles all the answer buttons in Ipad and ipad pro view */
+    .answer-button {
         width: 42%;
+        font-size: 50px;
+    }
+
+    /* Styles top left answer button in Ipad and ipad pro view */
+    .answer-top-left {
+        top: 60%;
+        left: 5%;
+    }
+
+    /* Styles top right answer button in Ipad and ipad pro view */
+    .answer-top-right {
+        top: 60%;
+        right: 5%;
+    }
+
+    /* Styles bottom left answer button in Ipad and ipad pro view */
+    .answer-bottom-left {
+        top: 74%;
+        left: 5%;
+    }
+
+    /* Styles bottom right answer button in Ipad and ipad pro view */
+    .answer-bottom-right {
         top: 74%;
         right: 5%;
-        font-size: 60px;
     }
 }
+
 /* Mobile View */
 @media (max-width: 690px) {
+
+    /* Styles the main game title in mobile view */
     .title {
         font-size: 22px;
         margin-top: 17px;
     }
-  .flag-count {
+
+    /* Styles the flag count text in mobile view */
+    .flag-count {
         font-size: 17px;
         margin-top: 17px;
     }
-  .score {
+
+    /* Styles the score text in mobile view */
+    .score {
         font-size: 17px;
     }
- .reset-button {
+
+    /* Styles the reset button in mobile view */
+    .reset-button {
         font-size: 20px;
-        padding: 5px 5px 0px 5px;
+        padding: 3px 5px 0px 5px;
         margin-top: 17px;
-  }
-.flag {
+    }
+
+    /* Styles the flag container in mobile view */
+    .flag {
         width: 100%;
         height: 40%;
         margin-top: 90px;
         margin-left: 0;
     }
-    
-  .answer1 {
+
+    /* Styles all the answer buttons in mobile view */
+    .answer-button {
         width: 100%;
+        font-size: 50px;
+        font-size: 32px;
+        padding: 3px 5px 3px 5px;
+    }
+
+    /* Styles the top answer button in mobile view */
+    .answer-top-left {
         top: 55%;
-        font-size: 32px;
-        padding: 3px 5px 3px 5px;
         left: 0;
-        right: 0;
     }
-.answer2 {
-        width: 100%;
+
+    /* Styles the second from top answer button in mobile view */
+    .answer-top-right {
         top: 65%;
-        font-size: 32px;
-        padding: 3px 5px 3px 5px;
         right: 0;
     }
- .answer3 {
-        width: 100%;
+
+    /* Styles the third from top answer button in mobile view */
+    .answer-bottom-left {
         top: 75%;
-        font-size: 32px;
-        padding: 3px 5px 3px 5px;
         left: 0;
     }
- .answer4 {
-        width: 100%;
+
+    /* Styles the bottom answer button in mobile view */
+    .answer-bottom-right {
         top: 85%;
-        font-size: 32px;
-        padding: 3px 5px 3px 5px;
         right: 0;
     }
 }
 
+/* Galaxy Fold View */
+@media (max-width: 280px) {
+
+    /* Styles the main game title in galaxy fold view */
+    .title {
+        font-size: 12px;
+    }
+
+    /* Changes the flag count font size in galaxy fold view */
+    .flag-count {
+        font-size: 12px;
+    }
+
+    /* Changes the score font size in galaxy fold view */
+    .score {
+        font-size: 12px;
+    }
+
+    /* Changes the reset button font size in galaxy fold view */
+    .reset-button {
+        font-size: 10px;
+    }
+}
