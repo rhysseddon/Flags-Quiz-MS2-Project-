@@ -96,7 +96,6 @@ function changeCounters(){
 }
 ;
 
-<<<<<<< HEAD
 
 
 
@@ -127,13 +126,11 @@ question3();
 }
 return;
 });
-=======
 /**
  * Changes the flag to the next flag in the flags array.
  */
 function nextFlag() {
     $(".flag").attr("src", "assets/images/" + flags[flagCount] + "-flag.jpg");
->>>>>>> d3e21dfb6da8da594d0ebd7a20cb0ff1f2d528dc
 }
 
 /**
