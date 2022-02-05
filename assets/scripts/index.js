@@ -1,7 +1,7 @@
-const flags = ["wales", "ireland", "india", "argentina", "chile", "cambodia", "malaysia", "usa", "switzerland", "canada", "portugal", "china", "japan", "brazil", "italy", "mexico", "south-africa", "russia", "germany", "spain"];
+const flags = ["wales", "ireland", "india", "argentina", "chile", "cambodia", "malaysia", "usa", "switzerland", "canada", "portugal", "china", "japan", "brazil", "italy", "mexico", "south-africa", "russia", "germany", "spain", "australia"];
 let flagCount = 0;
 let score = 0;
-const countries = ["wales", "ireland", "india", "argentina", "chile", "cambodia", "malaysia", "usa", "switzerland", "canada", "portugal", "china", "japan", "brazil", "italy", "mexico", "south-africa", "russia", "germany", "spain"];
+const countries = ["wales", "ireland", "india", "argentina", "chile", "cambodia", "malaysia", "usa", "switzerland", "canada", "portugal", "china", "japan", "brazil", "italy", "mexico", "south-africa", "russia", "germany", "spain", "australia"];
 
 /**
  * This function shuffles the countries array into a random order.
